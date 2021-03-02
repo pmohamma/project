@@ -1,0 +1,370 @@
+St # Store Name Address City, State Zip Phone
+001 Downtown Seattle 500 Pine Street Seattle, WA 98101 206-628-2111
+003 Southcenter Square Rack 17200 Southcenter Parkway, Suite 110 Tukwila, WA 98188 206-407-1020
+004 Bellevue Square 100 Bellevue Square Bellevue, WA 98004 425-455-5800
+005 Southcenter 100 Southcenter Mall Tukwila, WA 98188 206-246-0400
+006 Tacoma Mall 4502 S Steele Street, Suite 800 Tacoma, WA 98409 253-475-3630
+009 Spokane 828 W Main Avenue Spokane, WA 99201 509-455-6111
+010 Alderwood 3200 184th Street Southwest Lynnwood, WA 98037 425-771-5755
+011 Anchorage Rack 680 E Northern Lights Boulevard Anchorage, AK 99503 907-334-6000
+014 Factoria Square Rack 3920 124th Street Southeast Bellevue, WA 98006 425-746-7200
+015 Golde Creek Rack 19500 Alderwood Mall Parkway Lynnwood, WA 98036 425-774-6569
+016 Downtown Seattle Rack 400 Pine Street, Suite 36 Seattle, WA 98101 206-448-8522
+017 The Outlet Collection Rack 1101 Outlet Collection DR Southwest, #1320 Auburn, WA 98001 253-833-8824
+020 Downtown Portland 701 SW Broadway Portland, OR 97205 503-224-6666
+022 Clackamas Promenade Rack 8930 SE Sunnyside Road Clackamas, OR 97015 503-654-5415
+025 Washington Square 9700 SW Washington Square Road Tigard, OR 97223 503-620-0555
+027 Tanasbourne Town Center Rack 18100 NW Evergreen Parkway Beaverton, OR 97006 503-439-0900
+028 Portland Rack 245 SW Morrison Street Portland, OR 97204 503-299-1815
+032 Fashion Place 6191 S State Street, Suite 200 Murray, UT 84107 801-261-4402
+033 Sugarhouse Rack 2210 S 1300 East Salt Lake City, UT 84106 801-484-8880
+034 Park Meadows 8465 Park Meadows Center Drive Lone Tree, CO 80124 303-799-3400
+036 Park Meadows Rack 8676 S Park Meadows Center Drive Lone Tree, CO 80124 303-706-0035
+037 Cherry Creek 2810 E 1st Avenue Denver, CO 80206 720-746-2424
+045 Nordstrom Local Melrose 8401 Melrose PL Los Angeles, CA 90069 323-602-2201
+047 Hyatt Centric Waikiki Beach Rack 2255 Kuhio Avenu, Suite 200 Honolulu, HI 96815 808-275-2555
+048 Ward Village Shops Rack 1170 Auahi Street Honolulu, HI 96814 808-589-2060
+054 Nordstrom Local Brentwood 214 26th Street Santa Monica, CA 90402 213-995-5601
+056 Nordstrom Local Downtown LA 700 W 7th Street, Suite S200 Los Angeles, CA 90017 213-995-5606
+057 Nordstrom TopShop / TopMan 189 The Grove Drive, J-10 Los Angeles, CA 90036 n/a
+071 Comnons at South Towne Rack 10379 S State Street Sandy, UT 84070 801-432-5100
+072 Station Park Rack 380 N Station Parkway Farmington, UT 84025 801-447-6077
+073 City Creek Center 55 SW Temple Salt Lake City, UT 84101 801-322-4200
+074 University Crossing Rack 360 E University Parkway Orem, UT 84058 801-734-4600
+109 Spokane Valley Plaza Rack 14018 E Indiana Avenue Spokane, WA 99216 509-484-2233
+110 BelMar Rack 393 S Vance Street Lakewood, CO 80226 720-389-3420
+111 Northgate Rack 401 NE Northgate Way, Suite 304 Seattle, WA 98125 206-641-3300
+112 Oakway Center Rack 5 Oakway Center Eugene, OR 97401 541-334-7020
+113 Cascade Station Rack 10159 NE Cascades Parkway Portland, OR 97220 971-201-4332
+120 Tacoma Mall Rack (Tacoma, WA) 5703 N Marine Drive Portland, OR 97203 FALL 2020
+125 Cascade Plaza Rack 9175 SW Cascade Avenue Beaverton, OR 97008 971-327-6161
+130 Boise Town Rack 534 N Milwaukee Street Boise, ID 83704 208-321-4040
+135 Twenty Ninth Street Rack 1601 29th Street, Suite 1301 Boulder, CO 80301 720-887-3588
+136 Cherry Creek Rack 1505 S Colorado Boulevard Denver, CO 80222 303-305-4380
+137 Chapel Hills East Rack 7645 Academy Boulevard North Colorado Springs, CO80920 719-772-6001
+138 Lincoln Square Rack 500 Bellevue Way Northeast, Suite 145 Bellevue, WA 98004 425-505-4222
+139 Totem Lake Rack 12520 Totem Lake Boulevard Northeast #120 Kirkland, WA 98034 425-202-0205
+140 Foothills Mall Rack 3050 S College Avenue Fort Collins, CO 80525 970-829-3101
+148 The Orchard Rack 14530 Delaware Street Westiminster, CO 80023 303-729-6560
+150 Tempe Marketplace Rack 1900 E Rio Salado Parkway Tempe, AZ 85281 480-603-4600
+151 Wilmot Plaza Rack 6317 E Broadway Boulevard Tucson, AZ 85710 520-395-4000
+154 San Tan Village Rack 2090 E Williams Field Road Gilbert, AZ 85295 480-665-5103
+155 Winrock Rack 2100 Louisana Boulevard Northeast Albuquerque, NM 87110 505-348-5460
+156 LA Local Omni Hub (LOH) 1600 S Milliken Ontario, CA 91761 n/a
+160 The Center at Rancho Niguel Rack 27991 Greenfield Drive Laguna Niguel, CA 92677 949-334-6250
+161 Valencia Promenade Rack 27095 McBean Parkway Santa Clarita, CA 91355 661-388-2782
+162 El Segundo Plaza Rack 720 S Pacific Coast Highway El Segundo, CA 90245 310-765-5461
+163 Fig at 7th Rack 735 S Figueroa Street, Suite 150 Los Angeles, CA 90017 213-995-5568
+164 Porter Ranch Rack 20039 W Rinaldi Street, Suite 120 Porter Ranch, CA 91326 818-739-4140
+165 Marina Pacifica Mall Rack 6274 E Pacific Coast Highway Long Beach, CA 90803 562-546-6100
+166 The Shops at La Jolla Village Rack 8875 Villa La Jolla Drive La Jolla, CA 92037 858-373-4600
+167 Cerritos Plaza Rack 11111 183rd Street Cerritos, CA 90703 562-565-6025
+168 The Market Place Rack 2882 El Camino Real Tustin, CA 92782 714-689-3550
+171 Trunk Club | Dallas Clubhouse 333 1st Ave Dallas, TX 75226 214-932-6180
+172 Trunk Club | Washington DC Clubhouse 525 9th Street Northwest, Suite 700 Washington, DC 20004 202-601-8701
+173 Trunk Club | Los Angeles Clubhouse 8833 National Boulevard Culver City, CA 90232 310-905-3601
+174 Trunk Club | Chicago Clubhouse 325 W Ohio Street, 7th Floor Chicago, IL 60654 312-801-7200
+175 Trunk Club | New York Clubhouse 457 Madison Avenue New York, NY 10022 646-780-5310
+176 Trunk Club | Boston Clubhouse 501 Boylston Street, Suite 3102 Boston, MA 02116 617-370-5620
+203 Nordstrom Local New York 457 Madison Avenue New York, NY 10022 800-385-0100
+209 Manhattan Stock Staging Area (SSA) 839 Commerce Drive Upper Marlboro, MD20774 n/a
+210 NYC Flagship 225 W 57th Street New York, NY 10019 212-295-2000
+212 Mens Store New York City 235 W 57th Street New York, NY 10019 212-843-5100
+220 Michigan Avenue 55 E Grand Avenue Chicago, IL 60611 312-464-1515
+221 Oakbrook 10 Oak Brook Center Oak Brook, IL 60523 630-571-2121
+222 Mall of America 1000 NW Court Bloomington, MN 55425 952-883-2121
+223 Old Orchard 4937 Old Orchard Shopping Center Skokie, IL 60077 847-677-2121
+224 Woodfield Rack 1520 E Golf Road Schaumburg, IL 60173 847-413-2121
+225 Woodfield Mall 6 Woodfield Shopping Cenyer Schaumburg, IL 60173 847-605-2121
+227 Beachwood Place 26200 Cedar Road Beachwood, OH 44122 216-378-2121
+228 Somerset North 2850 W Big Beaver Road Troy, MI 48084 248-816-5100
+229 Village Square Rack 199 Skokie Boulevard Northbrook, IL 60062 847-205-0890
+230 Oak Park Mall 11143 W 95th Street Overland Park, KS 66214 913-492-8111
+231 Troy Market Place Rack 822 E Big Beaver Road Troy, MI 48083 248-764-2121
+232 West County 47 W County Center Des Peres, MO 63131 314-255-2000
+233 Mall of America Rack 324 W Market Bloomington, MN 55425 952-854-3131
+234 Easton Town Center 4000 Worth Avenue Columbus, OH 43219 614-416-7111
+235 Twelve Oaks 27640 Novi Road Novi, MI 48377 248-504-5700
+237 Ross Park 1000 Ross Park Mall Drive Pittsburgh, PA 15237 412-548-4300
+238 Fashion Mall at Keystone 8702 Keystone Crossing Indianapolis, IN 46240 317-810-9809
+239 Kenwood Towne Centre 7801 Montgomery Road Cincinnati, OH 45236 513-699-4190
+240 Saint Louis 1453 St. Louis Galleria Saint Louis, MO 63117 314-884-4900
+241 Legacy Village Rack 25149 Cedar Road Lyndhurst, OH 44124 216-472-2244
+242 Orland Park Place Rack 140 Orland Park Place Orland Park, IL 60462 708-428-2600
+243 Rookwood Rack 2692 Madison Road Cincinnati, OH 45208 513-878-6810
+244 Shops at Orchard Place Rack 9625 Skokie Boulevard Skokie, IL 60077 847-324-2000
+245 Chicago Avenue Rack 101 E Chicago Ave Chicago, IL 60611 312-254-3660
+246 Brentwood Square Rack 1585 S Brentwood Boulevard St. Louis, MO 63144 314-785-1030
+247 Rivers Edge Rack 4036 E 82nd Street Indianapolis, IN 46250 317-572-2955
+248 Orchard Corners Rack 9540 Quivira Road Lenexa, KS 66215 913-553-6242
+249 Manchester Highlands Rack 100 Highlands Boulevard Drive Manchester, MO 63011 636-438-4100
+253 Mellody Farm Rack 901 N Milwaukee Avenue, Unit 600 Vernon Hills, IL 60061 224-206-8000
+254 Crystal Court Rack 80 S 8th Street, Suite 102 Minneapolis, MN 55402 763-999-3415
+256 Woodbury Rack 315 Radio Drive Woodbury, MN 55125 651-900-7400
+260 Last Chance 100 Yorktown Shopping Center Lomard, IL 60148 630-599-2011
+264 Harlem Irving Plaza Rack 4250 N Harlem Avenue Norridge, IL 60706 708-842-5300
+265 Shops on Main Rack 185 US Highway 41 Schereville, IN 46375 219-227-3960
+266 Arborland Center Rack 3547 Washtenaw Avenue Ann Arbor, MI 48104 734-780-3232
+267 Great Lakes michigan Crossing Rack 4700 Baldwin Road, Suite A102 Auburn Hills, MI 48326 844-475-4180
+268 Lincoln Park Rack 1551 N Sheffield Avenue Chicago, IL 60642 312-624-6031
+269 Springbrook Prairie Rack 2511 W 75th Street Naperville, IL 60540 630-995-4040
+270 Oak Brook Place Rack 2155 W 22nd Street Oak Brook, IL 60523 630-572-1212
+271 Arbor Lakes Rack 12745 Elm Creek Boulevard Maple Grove, MN 55369 763-898-5300
+272 Mayfair Collection Rack 11500 W Burleigh Street Wauwautosa, WI 53222 414-944-6350
+273 Centerpointe Mall Rack 3615 28th Street Southeast Grand Rapids, MI 49512 616-575-2127
+274 The Shops at State and Washington Rack 24 N State Street Chicago, IL 60602 312-377-5500
+275 The Shoppes at Knollwood Rack 8344 Highway 7 St. Louis Park, MN 55426 952-303-7300
+276 Easton Market Rack 3736 Easton Market Columbus, OH 43219 614-750-2222
+277 Crocker Park Rack 30121 Detroit Road Westlake, OH 44145 440-925-6464
+278 Sun Center Rack 3702 W Dublin Granville Road Columbus, OH 43235 614-408-4205
+279 The Greene Town Center Rack 33 Greene Boulevard Beavercreek, OH 45440 937-306-4145
+280 South Loop Rack 1118 S Canal Street Chicago, IL 60607 312-276-6201
+281 Shelbyville Road Plaza Rack 4600 Shelbyville Road, Suite 620 Louisville, KY 40207 502-899-4940
+282 Mayfair 2424 N Mayfair Road Wauwautosa, WI 53226 414-203-6900
+283 Ridgedale Center 12441 Wayzata Boulevard Minnetonka, MN 55305 651-900-6800
+284 The Plaza at Jordan Creek Rack 320 S Jordan Creek Parkway West Des Moines, IA 50266 515-221-4320
+285 Kildeer Village Square Rack 20393 N Rand Road, Suite 104 Kildeer, IL 60074 224-286-5000
+286 West Towne Crossing Rack 7349 W Towne Way Madison, WI 53719 608-824-6760
+287 Algonquin Commons 1808 S Randall Road Algonquin, IL 60102 224-509-3960
+288 Novi West Oaks Rack 43839 W Oaks Drive Novi, MI 48377 248-319-4000
+289 Fashion Outlet Rack 5220 Fashion Outlets Way, Suite 2325 Rosemont, IL 60018 847-349-6000
+320 South Coast Plaza 3333 Bristol Street Costa Mesa, CA 92626 714-549-8300
+321 Brea Mall 500 Brea Mall Way Brea, CA 92821 714-529-0123
+322 Los Cerritos Center 300 Los Cerritos Center Cerritos, CA 90703 562-924-0940
+326 The Shops at Mission Viejo 100 The Shops at Mission Viejo Mission Viejo, CA 92691 949-347-2710
+328 Chino Spectrum Towne Center Rack 3849 Grand Avenue Chino, CA 91710 909-591-0551
+329 Brea Union Plaza Rack 2345 E Imperial Highway Brea, CA 92821 714-529-4222
+330 Irvine Spectrum Center 800 Spectrum Center Drive Irvine, CA 92618 949-255-2800
+331 Towne Center Rack 44449 Town Center Way Palm Desert, CA 92260 760-469-5300
+332 Long Beach Exchange Rack 4260 E Carons Street Long Beach, CA 90808 562-249-6749
+333 Fashion Island 901 Newport Center Drive Newport Beach, CA 92660 949-610-0700
+334 Colonies Crossroads Rack 1301 E 19th Street Upland, CA 91784 909-912-6300
+336 Outlets at Orange Rack 20 City Boulevard West Orange, CA 92868 714-202-3400
+337 Laguna Hills Mall Rack 23541 Calle De La Louisa Laguna Hills, CA 92653 949-334-4924
+338 Metro Pointe at South Coast Rack 901 S Coast Drive Costa Mesa, CA 92626 714-751-5901
+340 Americana at Brand 102 Caruso Avenue Glendale, CA 91210 818.502.9922
+341 Topanga 21725 Victory Boulevard Canoga Park, CA 91303 818-884-7900
+342 Del Amo Fashion Center 21500 Hawthorne Boulevard Torrance, CA 90503 310-542-9440
+345 Santa Anita 400 S Baldwin Avenue Arcadia, CA 91007 626-821-6363
+347 Culver City Rack 6000 Sepulveda Boulevard Culver City, CA 90230 310-641-4046
+348 The Oaks 346 W Hillcrest Drive Thousand Oaks, CA 91360 805-418-4500
+349 Grove At Farmers Market 189 The Grove Drive Los Angeles, CA 90036 323-930-2230
+350 Glendale Fashion Center Rack 227 N Glendale Avenue Glendale, CA 91206 818-240-2404
+351 Beverly Connection Rack 100 N La Cienega Boulevard Los Angeles, CA 90048 323-602-0282
+352 Hastings Village Rack 3363 E Foothill Boulevard Pasadena, CA 91109 626-264-9044
+353 Santa Monica Place 220 Broadway Santa Monica, CA 90401 310-752-2701
+354 Burbank Empire Center Rack 1601 N Victory Place Burbank, CA 91504 818-478-2930
+356 Edinger Plaza Rack 7532 Edinger Ave Huntington Beach, CA92647 657-204-7300
+357 Riverside Plaza Rack 3635 Riverside Plaza Drive, Suite 120 Riverside, CA 92506 951-905-6272
+358 Topanga Rack 21490 Victory Boulevard Woodland Hills, CA 91367 818-884-6771
+359 West Covina Rack 1415 Plaza Drive West Covina, CA 91790 626-404-2633
+360 Fashion Valley Center 6997 Friars Road San Diego, CA 92108 619-295-4441
+361 UTC 4401 La Jolla Village Drive San Diego, CA 92122 858-457-4575
+363 Plaza Bonita Rack 3010 Plaza Bonita Road, Suite 2036 National City, CA 91950 619-765-3055
+366 The Shops at River Walk Rack 10650 Stockdale Highway, Suite 300 Bakersfield, CA 93311 661-282-4500
+367 The Shops at Town & Country Rack 2073 E Camelback Road Phoenix, AZ 85016 602-345-6880
+368 Commons at Temecula Rack 40450 Winchester Road Temecula, CA 92591 951-514-4941
+369 Carmel Mountain Plaza Rack 11940 Carmel Mtn Road, Suite 100 San Diego, CA 92128 858-312-7766
+370 South Bay Marketplace Rack 1517 Hawthorne Boulevard Redondo Beach, CA 90278 424-254-2448
+371 The Shops at Summerlin Rack 2310 Park Center Drive Las Vegas, NV 89135 702-915-2000
+372 Esplanade Shopping Center Rack 261 Esplanade Drive Oxnard, CA 93033 805-604-1122
+373 The Fountains at Farah Rack 8889 Gateway Boulevard West, Suite 600 El Paso, TX 79925 915-730-7900
+374 Ontario Mills Rack 4750 E Mills Circle Ontario, CA 91764 909-476-3160
+376 Stephanie Street Rack 579 N Stephanie Street, Suite A Henderson, NV 89014 702-948-2121
+377 Chandler Festival Rack 2620 W Chandler Boulevard Chandler, AZ 85224 480-722-2000
+378 Mission Valley Rack 1640 Camino Del Rio North San Diego, CA 92108 619-296-0143
+379 Scottsdale Promenade Rack 16245 N Scottsdale Road Scottsdale, AZ 85254 480-624-2200
+380 Fashion Square 7055 E Camelback Road Scottsdale, AZ 85251 480-946-4111
+383 Grand Plaza Rack 173 S Las Posas Road San Marcos, CA 92069 760-304-7050
+384 Century City 10250 Santa Monica Boulevard Dept 3 Los Angeles CA 90067 424-204-1177
+386 Fashion Show Mall 3200 Las Vegas Boulevard South Las Vegas, NV 89109 702-862-2525
+388 Arrowhead Crossing Rack 7535 W Bell Road Peoria, AZ 85382 623-240-2430
+389 The Corner Rack 4320 N Oracle Road Tucson, AZ 85705 520-333-2720
+393 Mountain Grove Rack 27651 San Bernardino Avenue Redlands, CA 92374 909-801-2750
+396 Janss Marketplace Rack 145 W Hillcrest Drive Thousand Oaks, CA 91360 805-852-2800
+420 Hillsdale Mall 130 Hillsdale Shopping Center San Mateo, CA 94403 650-570-5111
+421 Walnut Creek 1200 Broadway Plaza Walnut Creek, CA 94596 925-930-7959
+422 Stanford Shopping Center 550 Stanford Shopping Center Palo Alto, CA 94304 650-323-5111
+423 Corte Madera 1870 Redwood Highway Corte Madera, CA 94925 415-927-1690
+425 Valley Fair 2400 Forest Avenue San Jose, CA 95128 408-248-2180
+427 San Francisco Centre 865 Market Street San Francisco, CA 94103 415-243-8500
+428 Daly City Rack 152 Serramonte Center Daly City, CA 94015 650-755-1444
+431 San Leandro Rack 1285 Marina Boulevard San Leandro, CA 94577 510-614-1742
+432 Westgate Mall Rack 1600 Saratoga Avenue San Jose, CA 95129 408-374-4144
+433 Howe 'Bout Arden Center Rack 1600 Ethan Way, Suite 100 Sacramento, CA 95825 916-646-0846
+434 Galleria at Roseville 1131 Galleria Boulevard Roseville, CA 95678 916-780-7300
+435 East Bay Bridge Shopping Center Rack 3839 Emery Street Emeryville, CA 94608 510-740-4320
+470 Roseville Rack 1196 Galleria Boulevard Roseville, CA 95678 916-788-7700
+471 Fresno Rack 7883 N Blackstone Avenue Fresno, CA 93720 559-440-0111
+472 Ravenswood Rack 1771 E Bayshore Avenue East Palo Alto, CA 94303 650-798-2022
+473 DT San Francisco Rack 555 9th Street San Francisco, CA 94103 415-934-1211
+474 Market Street Rack 901 Market Street San Francisco, CA 94103 415-814-4955
+475 Oakridge Rack 925 Blossom Hill Road San Jose, CA 95123 408-600-3800
+476 Persimmon Place Rack 5300 Dublin Boulevard Dublin, CA 94568 925-558-2900
+477 Redfield Promenade Rack 4995 S Virginia Street Reno, NV 89502 775-332-6220
+478 Pacific Commons Rack 43706 Christy Street Fremont, CA 94538 510-580-7240
+479 Sunvalley Shopping Center Rack 703 Contra Costa Boulevard Pleasant Hill, CA 94523 925-566-7700
+481 Palladio at Broadstone Rack 440 Palladio Parkway Folsom, CA 95630 916-850-4505
+482 Coddingtown Rack 180 Coddingtown Center Santa Rosa, CA 95401 707-595-4200
+483 Vintage Oaks Rack 212 Vintage Way Novato, CA 94945 415-878-7841
+484 Nut Tree Rack 1621 E Monte Vista Ave, Suite C Vacaville, CA 95688 707 301-4756
+509 Rack at 31st & 6th 865 Avenue of the Americas New York, NY 10001 646-861-5440
+510 Destiny USA Rack 9643 Destiny USA Drive Syracuse, NY 13204 315-802-0200
+511 Staten Island Rack 15 Richmond Terrace, Suite 301 Staten Island, NY 10301 929-464-2827
+513 Gateway Center Rack 550 Gateway Drive, Suite 2 Brooklyn, NY 11239 718-223-2420
+514 Huntington Shopping Center Rack 350 Walt Whitman Road Huntington Station, N11746 631-683-2700
+515 Union Square Rack 60 E 14th Street New York, NY 10003 212-220-2080
+519 City Center Rack 3 City Place White Plains, NY 10601 914-614-6400
+520 Garden State Plaza 501 Garden State Plaza Paramus, NJ 07652 201-843-1122
+521 Menlo Park 449 Menlo Park Drive Edison, NJ 08837 732-603-5000
+523 The Westchester 135 Westchester Avenue White Plains, NY 10601 914-946-1122
+524 Roosevelt Field 630 Old Country Road Garden City, NY 11530 516-746-0011
+526 Westfarms 600 Westfarms Mall Farmington, CT 06032 860-521-9090
+527 The Mall at Short Hills 1200 Morris Turnpike Short Hills, NJ 07078 973-467-1500
+529 The Gallery at Westbury Plaza Rack 1040 Old Country Road Garden City, NY 11590 516-222-5544
+531 Natick Mall 290 Speen Street Natick, MA 01760 508-318-2600
+533 Warwick Mall Rack 400 Bald Hill Road Warwick, RI 02886 401-773-7930
+534 South Shore Plaza 250 Granite Street, Suite 227 Braintree, MA 02184 781-519-7200
+535 Burlington 75 Middlesex Turnpike Burlington, MA 01803 781-345-7800
+536 Northshore 210 Andover Street Peabody, MA 01960 978-278-7400
+537 Fulton Market Rack 505 Fulton Street Brooklyn, NY 11201 347-227-6915
+538 The SoNo Collection 100 N Water Street, Suite A Norwalk, CT 06854 203-642-2634
+539 Bergen Rack 510 Bergen Town Center Paramus, NJ 07652 201-518-2170
+541 University Station Rack 231 University Avenue Westwood, MA 02090 781-915-6700
+542 Liberty Tree Rack 50 Independence Way Danvers, MA 01923 978-539-6060
+543 Middlesex Commons Rack 43 Middlesex Turnpike Burlington, MA 01803 781-345-4960
+544 Willow Grove Park Rack 2500 W Moreland Road Willow Grove, PA 19090 215-449-3777
+545 West Farm Shopping Center Rack 1600 S East Road Farmington, CT 06032 860-321-2400
+546 Shoppers World Rack 1 Worcester Road Framingham, MA 01701 508-598-3484
+547 Newbury Rack 497 Boylston Street Boston, MA 02116 857-300-2300
+548 Manhasset Center Rack 1400 Northern Boulevard Manhasset, NY 11030 516-467-2250
+550 The Shoppes at Blackstone Valley Rack 70 Worcester Providence Turnpike Millbury, MA 01527 774-276-4400
+551 Chestnut Street Rack 1700 Chestnut Street Philadelphia, PA 19103 215-599-6755
+552 Maine Crossing Rack 200 Running Hill Road, Suite 5 South Portland, ME 04106 207-245-6610
+553 Braintree Rack 200 Grossman Drive, Suite 102 Braintree, MA 02184 781-930-6001
+554 Boulevard Consumer Square Rack 1579 Niagara Falls Boulevard Amherst, NY 14228 716-242-6830
+555 Mercer Mall Rack 3371 US Highway 1 Lawrenceville, NJ 08648 609-524-2625
+560 Colonie Center Rack 224B Colonie Center Albany, NY 12205 518-776-3600
+584 West Coast Omni Center (WCOC) 1600 S Milliken Avenue Ontario, CA 91761 n/a
+600 Tysons Corner 8075 Tysons Corner Center McLean, VA 22102 703-761-1121
+621 Pentagon City 1400 S Hayes Street Arlington, VA 22202 703-415-1121
+622 Towson Town Center 700 Fairmount Avenue Towson, MD 21286 410-296-2111
+623 Montgomery 7111 Democracy Boulevard Bethesda, MD 20817 301-365-4111
+624 Potomac Mills Rack 2700 Potomac Mills Circle Woodbridge, VA 22192 703-490-1440
+625 Columbia Crossing Rack 6141 Columbia Crossing Circle Columbia, MD 21045 443-518-7205
+627 Towson Rack 700 Fairmount Avenue Towson, MD 21286 410-494-9111
+629 King of Prussia 190 N Gulph Road King of Prussia, PA 19406 610-265-6111
+631 The Mall in Columbia 10300 Little Patuxent Parkway Columbia, MD 21044 410-715-2222
+633 Gaithersburg Rack 15760 Shady Grove Road Gaithersburg, MD 20877 301-527-1133
+634 King of Prussia Rack 101 Town Square Place King of Prussia, PA 19406 610-205-8717
+637 Cherry Hill 2000 Route 38 Cherry Hill, NJ 08002 856-773-5600
+639 Christiana Mall 100 Christiana Mall Newark, DE 19702 302-613-6000
+640 Fair Lakes Promenade Rack 12199 Fair Lakes Promenade Drive Fairfax, VA 22033 703-563-2540
+641 Carolina Pavilion Rack 9563 South Boulevard Charlotte, NC 28273 704-705-2161
+642 Cherry Hill Garden State Park Rack 951 Haddonfield Road, Suite A Cherry Hill, NJ 08002 856-773-4111
+643 Annapolis Harbour Center Rack 2540 Solomons Island Road Annapolis, MD 21402 443-440-6330
+644 Tysons Corner Rack 8027 Leesburg Pike, Suite 101 Vienna, VA 22182 703-206-7100
+645 Christiana Fashion Center Rack 2400 Fashion Center Boulevard Newark, DE 19702 302-613-6400
+646 Livingston Center Rack 530 W Mount Pleasant Avenue Livingston, NJ 07039 973-629-6100
+647 Rockaway Commons Rack 343 Mount Hope Avenue Rockaway, NJ 07801 973-620-6100
+648 Hamilton Crossings Rack 750 N Krocks Road, Suite 303 Allentown, PA 18106 610-628-6001
+649 Wayne Town Center Rack 141 State Route 23 Wayne, NJ 07470 973-200-2999
+650 Crossroads at Eatontown Rack 231 Highway 35 Eatontown, NJ 07724 732-676-7200
+651 Chimney Rock Rack 362 Chimney Rock Road Bound Brook, NJ 08805 732-627-3000
+652 Shoppes at Belmont Rack 1585 Fruitville Pike Lancaster, PA 17601 717-666-6420
+656 Lincoln Plaza Rack 2424 E Lincoln Highway, Suite 500 Langhorne, PA 19047 267-590-7300
+660 Woodmore Towne Center Rack 2700 Campus Way North, Suite 100 Lanham, MD 20706 240-764-2021
+661 Canton Crossing Rack 3967 Boston Street Baltimore, MD 21224 410-801-4922
+670 Dulles Town Crossing Rack 45575 Dulles Eastern Plaza Sterling, VA 20166 703-948-0100
+671 Pentagon Center Rack 1201 S Hayes Street, Suite A Arlington, VA 22202 703-399-3222
+672 Friendship Center Rack 5333 Wisconsin Avenue Washington, DC 20015 202-697-4100
+673 Downtown DC Rack 1800 L Street Northwest, Suite 102 Washington, DC 20036 202-627-3650
+674 Springfield Town Center Rack 6501 Springfield Mall Springfield, VA 22150 703-373-4500
+675 Street Rack 555 12th Streeet Northwest, Front 1 Washington D.C. 20004 202-827-2499
+676 The Block Northway Rack 8031 McKnight Road Pittsburgh, PA 15237 412-548-6000
+677 Pembroke Mall Rack 4588 Virginia Beach Boulevard Virginia Beach, VA 23462 757-518-2550
+706 Ala Moana 1450 Ala Moana Boulevard, Suite 2950 Honolulu, HI 96814 808-953-6100
+708 Memphis Rack 4572 Poplar Avenue, Suite 109 Memphis, TN 38117 901-866-9023
+709 The Centre at Preston Ridge Rack 3241 Preston Road, Suite 1402 Frisco, TX 75034 972-668-6860
+711 Bowman Place Rack 1110 Bowman Road Mt. Pleasant, SC 29464 843-375-4801
+712 Commons Rack 1540 N Federal Highway Ft. Lauderdale, FL 33304 954-901-2950
+713 Portofino Shopping CenterRack 19075 Interstate 45 South, Suite 106 Shenandoah, TX 77385 936-206-3243
+714 Winter Park Rack 1090 N Orlando Avenue, Suite 101 Winter Park, FL 32609 407-772-6010
+715 The Parke Rack 5001 Highway 183A Toll Road, Suite C1100 Cedar Park, TX 78613 737-843-3100
+716 Riverwalk Rack 500 Port of New Orleans Place, Suite 245 New Orleans, LA 70130 504-930-3870
+717 Ambassador Plaza Rack 111 Meadow Farm Road, Suite 140 Lafayette, LA 70508 337-484-1360
+719 Gallery on the Parkway Rack 13900 Dallas Parkway, Suite 300 Dallas, TX 75240 214-234-2808
+720 The Dallas Galleria 5220 Alpha Road Dallas, TX 75240 972-702-0055
+721 Baybrook Square Rack 1211 W Bay Area Boulevard Webster, TX 77598 281-672-6000
+723 Northpark 8687 N Central Expressway Dallas, TX 75225 214-231-3900
+724 Stonebriar Mall 2613 Preston Road Frisco, TX 75034 972-712-3794
+727 Preston Shepard Place Rack 1701 D-1 Preston Road Plano, TX 75093 972-267-1414
+730 Houston Galleria 5192 Hidalgo Street Houston, TX 77056 832-201-2700
+731 Barton Creek Square Mall 2901 S Capital of Texas Hwy Austin, TX 78746 512-691-3500
+732 The Shops at La Cantera 15900 La Cantera Parkway San Antonio, TX 78256 210-332-1900
+733 Domain Northside 3111 Palm Way Austin, TX 78758 512-605-4900
+734 Rim Rack 5823 Worth Parkway San Antonio, TX 78257 210-587-6644
+735 The Shops at Southlake Rack 1445 E Southlake Boulevard Southlake, TX 76092 817-601-3480
+736 Gateway Rack 9607 Research Boulevard, Suite 200 Austin, TX 78759 512-651-6180
+738 Park Lane Rack 8050 Park Lane Dallas, TX 75231 214-932-6222
+739 Parks at Arlington Rack 3865 S Cooper Street, Suite 6001 Arlington, TX 76015 817-664-3030
+740 Sunset Valley Rack 5601 Brodie Lane, Suite 700 Sunset Valley, TX 78745 512-697-2600
+741 Centre at Post Oak Rack 5000 Westhiemer Road, Suite 500 Houston, TX 77056 281-661-3600
+743 Promenade Shops Rack 20669 Biscaybe Boulevard Miami, FL 33180 305-384-4850
+744 Market at Town Center Rack 2665 Town Center Boulevard North Sugarland, TX 77479 281566-2000
+745 Alamo Quarry Rack 255 E Basse Road San Antonio, TX 78209 210-202-2400
+746 Woodlands Mall 1201 Lake Woodlands Drive Woodlands, TX 77380 832-562-4880
+747 Willowbrook Mall Rack 8000 Willowbrook Mall Houston, TX 77070 832-688-2000
+748 Village Plaza at Bunker Hill Rack 9714 Katy Freeway Houston, TX 77055 281-605-2705
+749 Woodland Plaza Rack 8722 E 71st Street Tulsa, OK 74133 918-505-4650
+750 Southpark 4400 Sharon Road Charlotte, NC 28211 704-442-6000
+751 Streets at Southpoint 6910 Fayetteville Road, Suite 500 Durham, NC 27713 919-806-3700
+754 Renaissance Center Rack 6807 Fayetteville Road, Suite 110 Durham, NC 27713 919-695-1000
+755 University Commons Rack 1400 Glades Road Boca Raton, FL 33431 561-287-4663
+756 The Markets at Town Center Rack 4924 Big Island Drive Jacksonville, FL 32246 904-328-2340
+757 Mercato Rack 9100 Strada Place Naples, FL 34108 239-449-7444
+758 Brentwood Place Shopping Center Rack 330 Franklin Road Brentwood, TN 37027 615-843-4200
+759 Green Hills 2130 Abbott Martin Road Nashville, TN 37215 615-850-6700
+760 Perimeter Mall 4390 Ashford Dunwoody Road Northeast Atlanta, GA 30346 770-394-1141
+762 Town Center at Boca Raton 5820 Glades Road Boca Raton, FL 33431 561-620-5555
+763 Shops at Merrick Park 4310 Ponce de Leon Boulevard Coral Gables, FL 33146 786-999-1313
+764 Mall of Georgia Crossing Rack 3205 Woodward Crossing Boulevard Buford, GA 30519 678-482-0123
+765 International Plaza 2223 N Westshore Boulevard Tampa, FL 33607 813-875-4400
+770 Last Chance 1919 E Camelback Road Phoenix, AZ 85016 602-248-2843
+771 Sawgrass Mills Rack 2604 Sawgrass Mills Circle Sunrise, FL 33323 954-331-3960
+772 Phipps Plaza 3500 Peachtree Road Northeast Atlanta, GA 30326 404-442-3000
+773 Palm Beach Gardens 3111 PGA Boulevard Palm Beach Gardens, 33410 561-340-2100
+774 Aventura 19507 Biscayne Boulevard Aventura, FL 33180 305-356-6900
+777 Miracle Marketplace Rack 3301 Coral Way Miami, FL 33145 786-662-6025
+778 Millenia Crossing Rack 4036 Eastgate Drive Orlando, FL 32839 321-558-3800
+779 Kendall Town & Country Rack 8525 Mills Drive Kendall, FL 33183 786-972-3450
+781 Tampa Rack 1702 N Dale Mabry Highway Tampa, FL 33607 813-422-7500
+782 Buckhead Station Rack 3495 Buckhead Loop Northeast Atlanta, GA 30326 404-736-2230
+783 North Point Market Center Rack 6200 N Point Parkway Alpharetta, GA 30022 678-281-6660
+784 Palm Beach Outlets Rack 1865 Palm Beach Lakes Boulevard West Palm Beach, FL 33401 561-491-4540
+785 Belle Isle Station Rack 1741 Belle Isle Boulevard Oklahoma City, OK 73118 405-529-5290
+786 Shoppes at University Town Center Rack 8551 Cooper Creek Boulevard University Park, FL 34201 941-870-4200
+787 River Ridge Shopping Center Rack 4612 Highway 280, Building B Birmingham, AL 35242 205-578-3100
+788 Perimeter Expo Rack 1201 Hammond Drive Northeast Dunwoody, GA 30346 678-405-7830
+789 St. John Town Center 4835 Town Crossing Drive Jacksonville, FL 32246 904-672-2200
+791 Harbison Court Rack 278 Harbison Boulevard Columbia, SC 29212 803-740-5454
+792 Magnolia Park Rack 1025 Woodruff Road Greenville, SC 29607 864-603-6100
+793 Countryside Mall Rack 2435 State Road 580 Clearwater, FL 33761 727-216-2525
+796 Lake Brandon Plaza Rack 11201 Causeway Boulevard Brandon, FL 33511 813-330-4500
+797 The Shops at Midtown Miami Rack 3201 N Miami Avenue Miami, FL 33127 786-338-2000
+798 The Mall of Louisiana Rack 9330 Mall of Louisiana Boulevard Baton Rouge, LA 70836 225-508-3030
+916 Culver City OP Photo Studio (samples dept.) 8680 Hayden Place Culver City, CA 90232 213-741-1890
+089 Portland DC 5703 N Marine Drive Portland, OR 97203 503-240-6071
+299 Central States DC 5050 Chavenelle Drive Dubuque, IA 52002 563-556-4050
+399 S California DC 1600 S Milliken Avenue Ontario, CA 91761 909-390-1040
+499 N California DC 37599 Filbert Street Newark, CA 94560 510-794-5440
+559 Bergen East DC 7373 West Side Avenue North Bergen, NJ 07047 201-624-2170
+562 Elizabethtown OP Fulfillment Center 30 Distribution Drive Elizabethtown, PA 17022 717-366-1300
+563 Cedar Rapids OP Fulfillment Center 7700 18th Street SW Cedar Rapids, IA 52404 319-846-4000
+567 Bergen West DC 16012 Arthur Street Cerritos, CA 90703 562-376-3550
+569 Elizabethtown Fulfillment Center 30 Distribution Drive Elizabethtown, PA 17022 717-366-1300
+579 Bergen Owned DC 7300 West Side Avenue North Bergen, NJ 07047 201-854-1512
+599 Direct Cedar Rapids Fulfillment Center 7700 18th Street SW Cedar Rapids, IA 52404 319-846-4000
+699 Marlboro DC 839 Commerce Drive Upper Marlboro, MD20774 301-390-7800
+799 Gainesville DC 5497 NE 49th Terrace Gainesville, FL 32609 352-384-2111
+879 San Bernardino OP Fulfillment Center 17335 Glen Helen Parkway San Bernardino, CA 92407 909-333-7700
