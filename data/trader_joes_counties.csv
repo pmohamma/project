@@ -1,0 +1,483 @@
+,store_location,trader_joes_county,trader_joes_state
+0,"205 Summit Blvd, Birmingham, AL 35243",jefferson county,Alabama
+1,"4025 E Chandler Blvd, Ahwatukee, AZ 85048",maricopa county,Arizona
+2,"7720 W Bell Rd, Glendale, AZ 85308",maricopa county,Arizona
+3,"2050 E Baseline Rd, Mesa, AZ 85204",maricopa county,Arizona
+4,"4726 E Shea Blvd, Phoenix, AZ 85028",maricopa county,Arizona
+5,"4821 N 20th St, Phoenix, AZ 85016",maricopa county,Arizona
+6,"252 Lee Blvd, Prescott, AZ 86303",yavapai county,Arizona
+7,"6202 N Scottsdale Rd, Scottsdale, AZ 85253",maricopa county,Arizona
+8,"7555 E Frank Lloyd Wright Blvd, North Scottsdale, AZ 85260",maricopa county,Arizona
+9,"14095 W Grand Ave, Surprise, AZ 85374",maricopa county,Arizona
+10,"6460 S McClintock Dr, Tempe, AZ 85283",maricopa county,Arizona
+11,"4209 N Campbell Ave, Tucson, AZ 85719",pima county,Arizona
+12,"4766 E Grant Rd, Tucson, AZ 85712",pima county,Arizona
+13,"1101 N Wilmot Rd, Tucson, AZ 85712",pima county,Arizona
+14,"7912 N Oracle Rd, Oro Valley, AZ 85704",pima county,Arizona
+15,"28941 Canwood St, Agoura Hills, CA 91301",los angeles county,California
+16,"2217 S Shore Ctr, Alameda, CA 94501",alameda county,California
+17,"26541 Aliso Creek Rd, Aliso Viejo, CA 92656",orange county,California
+18,"955 Rancho Pkwy, Arroyo Grande, CA 93420",san luis obispo county,California
+19,"8200-C 21 Stockdale Hwy, Bakersfield, CA 93311",kern county,California
+20,"1885 University Ave, Berkeley, CA 94703",alameda county,California
+21,"2500 E Imperial Hwy, Brea, CA 92821",orange county,California
+22,"5451 Lone Tree Way, Brentwood, CA 94513",contra costa county,California
+23,"214 East Alameda Ave, Burbank, CA 91502",los angeles county,California
+24,"363 Carmen Dr, Camarillo, CA 93010",ventura county,California
+25,"1875 Bascom Ave, Campbell, CA 95008",santa clara county,California
+26,"3555 Clares St, Capitola, CA 95010",santa cruz county,California
+27,"2629 Gateway Rd, Carlsbad, CA 92009",san diego county,California
+28,"22224 Redwood Rd, Castro Valley, CA 94546",alameda county,California
+29,"67720 E Palm Cyn Dr, Cathedral City, CA 92234",riverside county,California
+30,"12861 Towne Center Dr, Cerritos, CA 90703",los angeles county,California
+31,"10330 Mason Ave, Chatsworth, CA 91311",los angeles county,California
+32,"801 East Ave, Chico, CA 95926",butte county,California
+33,"13911 Peyton Dr, Chino Hills, CA 91709",san bernardino county,California
+34,"878 Eastlake Pkwy, Chula Vista, CA 91914",san diego county,California
+35,"475 W Foothill Blvd, Claremont, CA 91711",los angeles county,California
+36,"1077 N Willow, Clovis, CA 93611",fresno county,California
+37,"785 Oak Grove Rd, Concord, CA 94518",contra costa county,California
+38,"1150 Concord Ave, Concord, CA 94520",contra costa county,California
+39,"2790 Cabot Dr, Corona, CA 92883",riverside county,California
+40,"640 W 17th St, Costa Mesa, CA 92627",orange county,California
+41,"9290 Culver Blvd, Culver City, CA 90232",los angeles county,California
+42,"6150 Slauson Ave, Culver City, CA 90230",los angeles county,California
+43,"417 Westlake Ctr, Daly City, CA 94015",san mateo county,California
+44,"85 Railroad Ave, Danville, CA 94526",contra costa county,California
+45,"885 Russell Blvd, Davis, CA 95616",yolo county,California
+46,"13480 Highlands Place, San Diego, CA 92130",san diego county,California
+47,"1566 Colorado Blvd, Eagle Rock, CA 90041",los angeles county,California
+48,"225 El Cerrito Plaza, El Cerrito, CA 94530",contra costa county,California
+49,"9670 Bruceville Rd, Elk Grove, CA 95757",sacramento county,California
+50,"5700 Christie Ave, Emeryville, CA 94608",alameda county,California
+51,"115 N El Camino Real, Encinitas, CA 92024",san diego county,California
+52,"17640 Burbank Blvd, Encino, CA 91316",los angeles county,California
+53,"1885 S Centre City Pkwy, Escondido, CA 92025",san diego county,California
+54,"5309 Sunrise Blvd, Fair Oaks, CA 95628",sacramento county,California
+55,"1350 Gateway Blvd, Fairfield, CA 94533",solano county,California
+56,"850 E Bidwell St, Folsom, CA 95630",sacramento county,California
+57,"39324 Argonaut Way, Fremont, CA 94538",alameda county,California
+58,"58478 N. Friant Road, Fresno, CA 93720",fresno county,California
+59,"103 E Glenoaks Blvd, Glendale, CA 91207",los angeles county,California
+60,"5767 Calle Real, Goleta, CA 93117",santa barbara county,California
+61,"11114 Balboa Blvd, Granada Hills, CA 91344",los angeles county,California
+62,"1100 Pacific Coast Hwy, Hermosa Beach, CA 90254",los angeles county,California
+63,"1600 N Vine St, Los Angeles, CA 90028",los angeles county,California
+64,"21431 Brookhurst St, Huntington Beach, CA 92646",orange county,California
+65,"18681 Main St, Huntington Beach, CA 92648",orange county,California
+66,"16821 Algonquin St, Huntington Beach, CA 92649",orange county,California
+67,"6222 Irvine Blvd, Irvine, CA 92620",orange county,California
+68,"4225 Campus Dr, Irvine, CA 92612",orange county,California
+69,"14443 Culver Dr, Irvine, CA 92604",orange county,California
+70,"475 Foothill Blvd, La Canada, CA 91011",los angeles county,California
+71,"46400 Washington St, La Quinta, CA 92253",riverside county,California
+72,"3649 Mt Diablo Blvd, Lafayette, CA 94549",contra costa county,California
+73,"24321 Avenida De La Carlota, Laguna Hills, CA 92653",orange county,California
+74,"32351 Street of the Golden Lantern, Laguna Niguel, CA 92677",orange county,California
+75,"8657 Villa La Jolla Dr, La Jolla, CA 92037",san diego county,California
+76,"5495 Grossmont Center Dr, La Mesa, CA 91942",san diego county,California
+77,"2052 Redwood Hwy, Larkspur, CA 94921",marin county,California
+78,"1122-A E Stanley Blvd, Livermore, CA 94550",alameda county,California
+79,"2222 Bellflower Blvd, Long Beach, CA 90815",los angeles county,California
+80,"4210 Long Beach Blvd, Long Beach, CA 90807",los angeles county,California
+81,"6451 E Pacific Coast Hwy, Long Beach, CA 90803",orange county,California
+82,"2310 Homestead Rd, Los Altos, CA 94024",santa clara county,California
+83,"175 S Fairfax Ave, Los Angeles, CA 90048",los angeles county,California
+84,"8500 Burton Way, Los Angeles, CA 90048",los angeles county,California
+85,"263 S La Brea Ave, Los Angeles, CA 90036",los angeles county,California
+86,"2738 Hyperion Ave, Los Angeles, CA 90027",los angeles county,California
+87,"8000 Sunset Blvd, Los Angeles, CA 90046",los angeles county,California
+88,"3131 S Hoover Street, Los Angeles, CA",los angeles county,California
+89,"15466 Los Gatos Blvd, Los Gatos, CA 95032",santa clara county,California
+90,"1821 Manhattan Beach Blvd, Manhattan Beach, CA 90266",los angeles county,California
+91,"1800 Rosecrans Blvd, Manhattan Beach, CA 90266",los angeles county,California
+92,"720 Menlo Ave, Menlo Park, CA 94025",san mateo county,California
+93,"765 Broadway, Millbrae, CA 94030",san mateo county,California
+94,"1072 Camino Del Rio N, San Diego, CA 92105",san diego county,California
+95,"25410 Marguerite Pkwy, Mission Viejo, CA 92692",orange county,California
+96,"3250 Dale Rd, Modesto, CA 95356",stanislaus county,California
+97,"604 W Huntington Dr, Monrovia, CA 91016",los angeles county,California
+98,"570 Munras Ave, Monterey, CA 93940",monterey county,California
+99,"2462 Honolulu Ave, Montrose, CA 91020",los angeles county,California
+100,"17035 Laurel Rd, Morgan Hill, CA 95037",santa clara county,California
+101,"590 Showers Dr, Mountain View, CA 94040",santa clara county,California
+102,"3654 Bel Aire Plaza, Napa, CA 94558",napa county,California
+103,"125 N Reino Rd, Newbury Park, CA",ventura county,California
+104,"8086 East Coast Hwy, Newport Beach, CA 92657",orange county,California
+105,"7514 Redwood Blvd, Novato, CA 94945",marin county,California
+106,"3250 Lakeshore Ave, Oakland, CA 94610",alameda county,California
+107,"5727 College Ave, Oakland, CA 94618",alameda county,California
+108,"2570 Vista Way, Oceanside, CA 92054",san diego county,California
+109,"2114 N Tustin St, Orange, CA 92865",orange county,California
+110,"1170 Forest Ave, Pacific Grove, CA 93950",monterey county,California
+111,"44250 Town Center Way, Palm Desert, CA 92260",riverside county,California
+112,"39507 10th Street W, Palmdale, CA 93551",los angeles county,California
+113,"855 El Camino Real, Palo Alto, CA 94301",santa clara county,California
+114,"3035 E Huntington Dr, Pasadena, CA 91107",los angeles county,California
+115,"467 Rosemead Blvd, Pasadena, CA 91107",los angeles county,California
+116,"610 S Arroyo Pkwy, Pasadena, CA 91105",los angeles county,California
+117,"345 S Lake Ave, Pasadena, CA 91101",los angeles county,California
+118,"169 North McDowell Blvd, Petaluma, CA 94954",sonoma county,California
+119,"2742 Pinole Valley Rd, Pinole, CA 94564",contra costa county,California
+120,"3903 Santa Rita Road, Pleasanton, CA 94588",alameda county,California
+121,"6401 Haven Ave, Rancho Cucamonga, CA 91737",san bernardino county,California
+122,"28901 S Western Ave, Rancho Palos Verdes, CA 90275",los angeles county,California
+123,"31176 Hawthorne Blvd, Rancho Palos Verdes, CA 90275",los angeles county,California
+124,"30652 Santa Margarita Pkwy, Rancho Santa Margarita, CA 92688",orange county,California
+125,"845 Browning St, Redding, CA 96003",shasta county,California
+126,"552 Orange St Plaza, Redlands, CA 92374",san bernardino county,California
+127,"1761 S Elena Ave, Redondo Beach, CA 90277",los angeles county,California
+128,"6225 Riverside Plaza, Riverside, CA 92506",riverside county,California
+129,"1117 Roseville Square, Roseville, CA 95678",placer county,California
+130,"5000 Folsom Blvd, Sacramento, CA 95819",sacramento county,California
+131,"2625 Marconi Ave, Sacramento, CA 95821",sacramento county,California
+132,"1482 El Camino Real, San Carlos, CA 94070",san mateo county,California
+133,"638 Camino De Los Mares, San Clemente, CA 92673",orange county,California
+134,"11955 Carmel Mtn Rd, San Diego, CA 92128",san diego county,California
+135,"1090 University Ave, San Diego, CA 92103",san diego county,California
+136,"1640 Garnet Ave, San Diego, CA 92109",san diego county,California
+137,"2401 Truxtun Rd, San Diego, CA 92106",san diego county,California
+138,"9850 Hibert St, San Diego, CA 92131",san diego county,California
+139,"5140 College Ave, CA",san diego county,California
+140,"856 W Arrow Hwy, San Dimas, CA 91773",los angeles county,California
+141,"555 9th St, San Francisco, CA 94103",san francisco city and county,California
+142,"3 Masonic Ave, San Francisco, CA 94118",san francisco city and county,California
+143,"1095 Hyde St, San Francisco, CA 94109",san francisco city and county,California
+144,"401 Bay St, San Francisco, CA 94133",san francisco city and county,California
+145,"10 4th St, San Francisco, CA 94103",san francisco city and county,California
+146,"265 Winston Dr, San Francisco, CA 94132",san francisco city and county,California
+147,"7260 N Rosemead Blvd, San Gabriel, CA 91775",los angeles county,California
+148,"7250 Bollinger Rd, San Jose, CA 95129",santa clara county,California
+149,"635 Coleman Ave, San Jose, CA 95110",santa clara county,California
+150,"5353 Almaden Expy, San Jose, CA 95118",santa clara county,California
+151,"5269 Prospect Rd, San Jose, CA 95129",santa clara county,California
+152,"32151 Camino Capistrano, San Juan Capistrano, CA 92675",orange county,California
+153,"3977 Higuera St, San Luis Obispo, CA 93401",san luis obispo county,California
+154,"1820-22 S Grant St, San Mateo, CA 94402",san mateo county,California
+155,"45 W Hillsdale Blvd, San Mateo, CA 94403",san mateo county,California
+156,"337 Third St, San Rafael, CA 94901",marin county,California
+157,"3329 S Bristol St, Santa Ana, CA 92704",orange county,California
+158,"3025 De La Vina, Santa Barbara, CA 93105",santa barbara county,California
+159,"222 North Milpas Street, Santa Barbara, CA 93103",santa barbara county,California
+160,"700 Front St, Santa Cruz, CA 95060",santa cruz county,California
+161,"1303 S Bradley Rd, Santa Maria, CA 93454",santa barbara county,California
+162,"3212 Pico Blvd, Santa Monica, CA 90405",los angeles county,California
+163,"3225 Cleveland Ave, Santa Rosa, CA 95403",sonoma county,California
+164,"2100 Santa Rosa Ave, Santa Rosa, CA 95407",sonoma county,California
+165,"14119 Riverside Dr, Sherman Oaks, CA 91423",los angeles county,California
+166,"2975 Cochran St, Simi Valley, CA 93065",ventura county,California
+167,"613 Mission St, South Pasadena, CA 91030",los angeles county,California
+168,"301 McLellan Dr, S San Francisco, CA 94080",san mateo county,California
+169,"6535 Pacific Ave, Stockton, CA 95207",san joaquin county,California
+170,"11976 Ventura Blvd, Studio City, CA 91604",los angeles county,California
+171,"316 W El Camino Real, Sunnyvale, CA 94087",santa clara county,California
+172,"40665 Winchester Rd, Temecula, CA 92591",riverside county,California
+173,"1111 Rossi Rd, Templeton, CA 93465",san luis obispo county,California
+174,"451 Avenida De Los Arboles, Thousand Oaks, CA 91360",ventura county,California
+175,"10130 Riverside Dr, Toluca Lake, CA 91602",los angeles county,California
+176,"19720 Hawthorne Blvd, Torrance, CA 90503",los angeles county,California
+177,"2545 Pacific Coast Hwy, Torrance, CA 90505",los angeles county,California
+178,"1198 Irvine Blvd, Tustin, CA 92780",orange county,California
+179,"26517 Bouquet Canyon Rd, Santa Clarita, CA 91350",los angeles county,California
+180,"1795 S Victoria Ave, Ventura, CA 93003",ventura county,California
+181,"103 S Mills Rd, Ventura, CA 93003",ventura county,California
+182,"1372 S California Blvd, Walnut Creek, CA 94596",contra costa county,California
+183,"6751 Fallbrook Ave, West Hills, CA 91307",los angeles county,California
+184,"7310 Santa Monica Blvd, West Hollywood, CA 90046",los angeles county,California
+185,"8611 Santa Monica Blvd, West Hollywood, CA 90069",los angeles county,California
+186,"10850 National Blvd, West Los Angeles, CA 90064",los angeles county,California
+187,"3456 S Sepulveda Blvd, West Los Angeles, CA 90034",los angeles county,California
+188,"11755 W Olympic Blvd, West Los Angeles, CA 90064",los angeles county,California
+189,"8645 S Sepulveda Blvd, Westchester, CA 90045",los angeles county,California
+190,"3835 E Thousand Oaks Blvd, Westlake Village, CA 91362",ventura county,California
+191,"1000 Glendon Ave, Los Angeles, CA 90024",los angeles county,California
+192,"15025 E Whittier Blvd, Whittier, CA 90603",los angeles county,California
+193,"21055 Ventura Blvd, Woodland Hills, CA 91364",los angeles county,California
+194,"19655 Yorba Linda Blvd, Yorba Linda, CA 92886",orange county,California
+195,"1906 28th St, Boulder, CO 80301",boulder county,Colorado
+196,"5342 N Nevada Ave, Colorado Springs, CO 80918",el paso county,Colorado
+197,"661 Logan St, Denver, CO 80203",denver county,Colorado
+198,"750 N Colorado Blvd, Denver, CO 80206",denver county,Colorado
+199,"790 N Colorado Blvd, Denver, CO 80206",denver county,Colorado
+200,"3500 S College Ave, Fort Collins, CO 80525",larimer county,Colorado
+201,"5910 S University Blvd, Greenwood Village, CO 80121",arapahoe county,Colorado
+202,"8055 West Bowles Ave Unit 3A, Littleton, CO 80123",arapahoe county,Colorado
+203,"113 Mill Plain Rd, Danbury, CT 06811",fairfield county,Connecticut
+204,"436 Boston Post Rd, Darien, CT 06820",fairfield county,Connecticut
+205,"2258 Black Rock Turnpike, Fairfield, CT 06825",fairfield county,Connecticut
+206,"560 Boston Post Rd, Orange, CT 06477",new haven county,Connecticut
+207,"1041 High Ridge Rd, Stamford, CT 06905",fairfield county,Connecticut
+208,"1489 New Britain Ave, West Hartford, CT 06110",hartford county,Connecticut
+209,"400 Post Rd E, Westport, CT 06880",fairfield county,Connecticut
+210,"5605 Concord Pike, Wilmington, DE 19803",new castle county,Delaware
+211,"1101 25th Street NW, Washington, DC 20037",district of columbia county,District of Columbia
+212,"1914 14th St NW, Washington, DC 20009",district of columbia county,District of Columbia
+213,"1240 4th St NE, Washington, DC 20002",district of columbia county,District of Columbia
+214,"750 Pennsylvania Ave SE, Washington, DC 20003",district of columbia county,District of Columbia
+215,"855 S Federal Hwy, Boca Raton, FL 33432",palm beach county,Florida
+216,"2296 S University Dr, Davie, FL 33324",broward county,Florida
+217,"1851 S Federal Hwy, Delray Beach, FL 33483",palm beach county,Florida
+218,"1560 N Federal Hwy, Fort Lauderdale, FL 33304",broward county,Florida
+219,"3724 SW Archer Rd, Gainesville, FL 32608",alachua county,Florida
+220,"11112 San Jose Blvd, Jacksonville, FL 32223",duval county,Florida
+221,"4180 S 3rd St, Jacksonville Beach, FL 32250",duval county,Florida
+222,"10600 Tamiami Trail North, Naples, FL 34108",collier county,Florida
+223,"8323 W Sand Lake Rd, Orlando, FL 32819",orange county,Florida
+224,"2560 PGA Blvd, Palm Beach Gardens, FL 33410",palm beach county,Florida
+225,"11960 Pines Blvd, Pembroke Pines, FL 33026",broward county,Florida
+226,"9205 S Dixie Hwy, Miami, FL 33156",miamidade county,Florida
+227,"4101 S Tamiami Trail, Sarasota, FL 34231",sarasota county,Florida
+228,"2742 4th St N, St. Petersburg, FL 33704",pinellas county,Florida
+229,"3425 Thomasville Rd, Tallahassee, FL 32309",leon county,Florida
+230,"3808 W Swann Ave, Tampa, FL 33609",hillsborough county,Florida
+231,"2877 South State Rd, Wellington, FL 33414",palm beach county,Florida
+232,"131 N Orlando Ave, Winter Park, FL 32789",orange county,Florida
+233,"1850 Epps Bridge Pkwy, Athens, GA 30606",athensclarke county unified government,Georgia
+234,"3183 Peachtree Rd NE, Atlanta, GA 30305",fulton county,Georgia
+235,"931 Monroe Dr NE, Atlanta, GA 30308",fulton county,Georgia
+236,"4250 Roswell Rd, Marietta, GA 30062",cobb county,Georgia
+237,"5185 Peachtree Pkwy, Bld 1200, Norcross, GA 30092",gwinnett county,Georgia
+238,"635 W Crossville Rd, Roswell, GA 30075",fulton county,Georgia
+239,"6277 Roswell Rd NE, Sandy Springs, GA 30328",fulton county,Georgia
+240,"300 S Capitol Blvd, Boise, ID 83702",ada county,Idaho
+241,"1800 South Randall Rd, Algonquin, IL 60102",mchenry county,Illinois
+242,"17 W Rand Rd, Arlington Heights, IL 60004",cook county,Illinois
+243,"1942 W Fabyan Pkwy, Batavia, IL 60510",kane county,Illinois
+244,"44 E Ontario St, Chicago, IL 60611",cook county,Illinois
+245,"3745 N Lincoln Ave, Chicago, IL 60613",cook county,Illinois
+246,"1840 N Clybourn Ave, Chicago, IL 60614",cook county,Illinois
+247,"1147 S Wabash Ave, Chicago, IL 60605",cook county,Illinois
+248,"667 W. Diversey Pkwy, Chicago, IL 60614",cook county,Illinois
+249,"122 Ogden Ave, Downers Grove, IL 60515",dupage county,Illinois
+250,"1211 Chicago Ave, Evanston, IL 60202",cook county,Illinois
+251,"680 Roosevelt Rd, Glen Ellyn, IL 60137",dupage county,Illinois
+252,"1407 Waukegan Rd, Glenview, IL 60025",cook county,Illinois
+253,"25 N La Grange Rd, La Grange, IL 60525",cook county,Illinois
+254,"735 W Route 22, Lake Zurich, IL 60047",lake county,Illinois
+255,"44 W Gartner Rd, Naperville, IL 60540",dupage county,Illinois
+256,"1600 S Milwaukee Ave, Libertyville, IL 60048",lake county,Illinois
+257,"127 Skokie Blvd, Northbrook, IL 60062",cook county,Illinois
+258,"483 N Harlem Ave, Oak Park, IL 60301",cook county,Illinois
+259,"14924 S La Grange Rd, Orland Park, IL 60462",cook county,Illinois
+260,"190 N Northwest Hwy, Park Ridge, IL 60068",cook county,Illinois
+261,"1426 E Golf Rd, Schaumburg, IL 60173",cook county,Illinois
+262,"5473 E 82nd St, Indianapolis, IN 46250",marion county,Indiana
+263,"2902 W 86th St, Indianapolis, IN 46268",marion county,Indiana
+264,"920 Ponseti Way, Coralville, IA 52241",johnson county,Iowa
+265,"6305 Mills Civic Pkwy, West Des Moines, IA 50266",polk county,Iowa
+266,"4201 W 119th St, Leawood, KS 66209",johnson county,Kansas
+267,"4600 Shelbyville Rd, Louisville, KY 40207",jefferson county,Kentucky
+268,"4600 Shelbyville Rd, Louisville, KY 40207",jefferson county,Kentucky
+269,"2326 Nicholasville Rd, Lexington, KY 40503",fayette county,Kentucky
+270,"2320 Nicholasville Rd, Lexington, KY 40503",fayette county,Kentucky
+271,"3535 Perkins Rd, Baton Rouge, LA 70808",east baton rouge parish,Louisiana
+272,"2949 Veterans Blvd, Metairie, LA 70002",jefferson parish,Louisiana
+273,"87 Marginal Way, Portland, ME 04101",cumberland county,Maine
+274,"160 F Jennifer Rd, Annapolis, MD 21401",anne arundel county,Maryland
+275,"6831 Wisconsin Ave, Bethesda, MD 20815",montgomery county,Maryland
+276,"6610 Marie Curie Dr, MD",howard county,Maryland
+277,"18270 Contour Rd, Gaithersburg, MD 20877",montgomery county,Maryland
+278,"1809 Reisterstown Rd, Pikesville, MD 21208",baltimore county,Maryland
+279,"12268-H Rockville Pike, Rockville, MD 20852",montgomery county,Maryland
+280,"10741 Columbia Pike, Silver Spring, MD 20901",montgomery county,Maryland
+281,"800 Kenilworth Drive, Towson, MD 21204",baltimore county,Maryland
+282,"145 Great Rd, Acton, MA 01720",middlesex county,Massachusetts
+283,"219 Western Ave, Allston, MA 02134",suffolk county,Massachusetts
+284,"1427 Massachusetts Ave, Arlington, MA 02476",middlesex county,Massachusetts
+285,"899 Boylston St, Boston, MA 02115",suffolk county,Massachusetts
+286,"1317 Beacon St, Brookline, MA 02446",norfolk county,Massachusetts
+287,"51 Middlesex Turnpike, Burlington, MA 01803",middlesex county,Massachusetts
+288,"748 Memorial Dr, Cambridge, MA 02139",middlesex county,Massachusetts
+289,"211 Alewife Brook Pkwy, Cambridge, MA 02138",middlesex county,Massachusetts
+290,"350 Patriot Place, Foxborough, MA 02035",norfolk county,Massachusetts
+291,"659 Worcester Rd, Framingham, MA 01701",middlesex county,Massachusetts
+292,"375 Russell St, Hadley, MA 01035",hampshire county,Massachusetts
+293,"1775 Washington St, Hanover, MA 02339",plymouth county,Massachusetts
+294,"5 Essington Dr, Hingham, MA 02043",plymouth county,Massachusetts
+295,"655 Lyannough Road, Hyannis, MA 02601",barnstable county,Massachusetts
+296,"958 Highland Ave, Needham Hts, MA 02494",norfolk county,Massachusetts
+297,"300 Andover St, Peabody, MA 01960",essex county,Massachusetts
+298,"77 D Boston Turnpike, Shrewsbury, MA 01545",worcester county,Massachusetts
+299,"145 Middlesex Ave, Somerville, MA 02145",middlesex county,Massachusetts
+300,"1121 Washington St, West Newton, MA 02465",middlesex county,Massachusetts
+301,"2398 E Stadium Blvd, Ann Arbor, MI 48104",washtenaw county,Michigan
+302,"6536 Telegraph Rd, Bloomfield Hills, MI 48301",oakland county,Michigan
+303,"3684 28th St SE, Kentwood, MI 49512",kent county,Michigan
+304,"17028 Kercheval Ave, Grosse Pointe, MI 48230",wayne county,Michigan
+305,"5099 Century Ave, Kalamazoo, MI 49006",kalamazoo county,Michigan
+306,"18771 Traditions Drive, Northville, MI 48167",wayne county,Michigan
+307,"3044 Walton Blvd, Rochester Hills, MI 48309",oakland county,Michigan
+308,"27880 Woodward Ave, Royal Oak, MI 48067",oakland county,Michigan
+309,"4270 W 78th St, Bloomington, MN 55435",hennepin county,Minnesota
+310,"12105 Elm Creek Blvd N, Maple Grove, MN 55369",hennepin county,Minnesota
+311,"713 S Washington Ave, Minneapolis, MN 55415",hennepin county,Minnesota
+312,"11220 Wayzata Blvd, Minnetonka, MN 55305",hennepin county,Minnesota
+313,"1200 16th St SW, Rochester, MN 55902",olmsted county,Minnesota
+314,"1041 Red Fox Rd, Shoreview, MN 55126",ramsey county,Minnesota
+315,"4500 Excelsior Blvd, St. Louis Park, MN 55416",hennepin county,Minnesota
+316,"484 Lexington Parkway S, St. Paul, MN 55105",ramsey county,Minnesota
+317,"8960 Hudson Rd, Woodbury, MN 55125",washington county,Minnesota
+318,"48 Brentwood Promenade Crt, Brentwood, MO 63144",saint louis county,Missouri
+319,"1679 Clarkson Rd, Chesterfield, MO 63017",saint louis county,Missouri
+320,"11505 Olive Blvd, Creve Coeur, MO 63141",saint louis county,Missouri
+321,"13343 Manchester Rd, Des Peres, MO 63131",saint louis county,Missouri
+322,"8600 Ward Pkwy, Kansas City, MO 64114",jackson county,Missouri
+323,"3120 Pine Lake Rd, Lincoln, NE 68516",lancaster county,Nebraska
+324,"10305 Pacific St, Omaha, NE 68114",douglas county,Nebraska
+325,"10345 South Eastern Ave, Henderson, NV 89052",clark county,Nevada
+326,"3790 US Hwy 395 S, Carson City, NV 89705",douglas county,Nevada
+327,"2716 N Green Valley Pkwy, Henderson, NV 89014",clark county,Nevada
+328,"5639 Centennial Ctr Blvd, Las Vegas, NV 89149",clark county,Nevada
+329,"7575 W Washington Ave, Las Vegas, NV 89128",clark county,Nevada
+330,"2315 Summa Dr, Las Vegas, NV 89135",clark county,Nevada
+331,"5035 S McCarran Blvd, Reno, NV 89502",washoe county,Nevada
+332,"262 Daniel Webster HWY, Nashua, NH 03060",hillsborough county,New Hampshire
+333,"45 Gosling Rd, Newington, NH 03801",rockingham county,New Hampshire
+334,"259 Allwood Rd, Clifton, NJ 07012",passaic county,New Jersey
+335,"715 River Rd, Edgewater, NJ 07020",bergen county,New Jersey
+336,"176 Columbia Turnpike, Florham Park, NJ 07932",morris county,New Jersey
+337,"1350 Willow Ave, Hoboken, NJ 07030",hudson county,New Jersey
+338,"300 P Route 73 S, Marlton, NJ 08053",burlington county,New Jersey
+339,"187 Millburn Ave, Millburn, NJ 07041",essex county,New Jersey
+340,"869 US-1, North Brunswick, NJ 08902",middlesex county,New Jersey
+341,"404 Rt 17 N, Paramus, NJ 07652",bergen county,New Jersey
+342,"3528 US 1 (Brunswick Pike), Princeton, NJ 08540",middlesex county,New Jersey
+343,"1031 Broad St, Shrewsbury, NJ 07702",monmouth county,New Jersey
+344,"1172 Hamburg Turnpike, Wayne, NJ 07470",passaic county,New Jersey
+345,"155 Elm St, Westfield, NJ 07090",union county,New Jersey
+346,"20 Irvington St, Westwood, NJ 07675",bergen county,New Jersey
+347,"8928 Holly Ave NE, Albuquerque, NM 87122",bernalillo county,Nebraska
+348,"2200 Uptown Loop NE, Albuquerque, NM 87110",bernalillo county,Nebraska
+349,"530 W Cordova Rd, Santa Fe, NM 87505",santa fe county,New Mexico
+350,"1565 Niagara Falls Blvd, Buffalo, NY 14228",erie county,New York
+351,"130 Court St, Brooklyn, NY 11201",kings county,New York
+352,"445 Gold St, Brooklyn, NY 11201",kings county,New York
+353,"79 Wolf Rd, Colonie, NY 12205",albany county,New York
+354,"5900 Jericho Turnpike, Commack, NY 11725",suffolk county,New York
+355,"215 North Central Ave, Hartsdale, NY 10530",westchester county,New York
+356,"1280 W Broadway, Hewlett, NY 11557",nassau county,New York
+357,"2085 Smith Haven Plaza, Lake Grove, NY 11755",suffolk county,New York
+358,"1260 Boston Post Rd, Larchmont, NY 10538",westchester county,New York
+359,"1714 Merrick Rd, Merrick, NY 11566",nassau county,New York
+360,"2073 Broadway, New York, NY 10023",new york county,New York
+361,"200 E 32nd St, New York, NY 10016",new york county,New York
+362,"670 Columbus Ave, New York, NY 10025",new york county,New York
+363,"675 6th Ave, New York, NY 10010",new york county,New York
+364,"233 Spring Street, New York, NY 10013",new york county,New York
+365,"142 E 14th St, New York, NY 10003",new york county,New York
+366,"138 E 14th St, New York, NY 10003",new york county,New York
+367,"3418 Long Beach Rd, Oceanside, NY 11572",nassau county,New York
+368,"425 S Oyster Bay Rd, Plainview, NY 11803",nassau county,New York
+369,"90-30 Metropolitan Ave, Queens, NY 11374",queens county,New York
+370,"3349 Monroe Ave, Rochester, NY 14618",monroe county,New York
+371,"727 White Plains Rd, Scarsdale, NY 10583",westchester county,New York
+372,"2385 Richmond Ave, Staten Island, NY 10314",richmond county,New York
+373,"3422 Erie Blvd E, Syracuse, NY 13214",onondaga county,New York
+374,"910 Old Country Rd, Garden City, NY 11530",nassau county,New York
+375,"120 Merrimon Ave, Asheville, NC 28801",buncombe county,North Carolina
+376,"1393 Kildaire Farms Rd, Cary, NC 27511",wake county,North Carolina
+377,"1800 E Franklin St, Chapel Hill, NC 27514",orange county,North Carolina
+378,"1133 Metropolitan Ave, Charlotte, NC 28204",mecklenburg county,North Carolina
+379,"1820 East Arbors Dr, Charlotte, NC 28262",mecklenburg county,North Carolina
+380,"6418 Rea Rd, Charlotte, NC 28277",mecklenburg county,North Carolina
+381,"3000 Wake Forest Rd, Raleigh, NC 27609",wake county,North Carolina
+382,"1437 S College Rd, Wilmington, NC 28403",new hanover county,North Carolina
+383,"252 South Stratford Rd, Winston Salem, NC 27103",forsyth county,North Carolina
+384,"7788 Montgomery Rd, Cincinnati, OH 45236",hamilton county,Ohio
+385,"3888 Townsfair Way, Columbus, OH 43219",franklin county,Ohio
+386,"6355 Sawmill Rd, Dublin, OH 43017",franklin county,Ohio
+387,"328 East Stroop Rd, Kettering, OH 45429",montgomery county,Ohio
+388,"175 Market St, Westlake, OH 44145",cuyahoga county,Ohio
+389,"28425 Chagrin Blvd, Woodmere, OH 44122",cuyahoga county,Ohio
+390,"6409 Avondale Dr, Nichols Hills, OK 73116",oklahoma county,Oklahoma
+391,"3702 S Peoria Ave, Tulsa, OK 74105",tulsa county,Oklahoma
+392,"11753 SW Beaverton Hillsdale Hwy, Beaverton, OR 97005",washington county,Oregon
+393,"63455 North Hwy 97, Bend, OR 97701",deschutes county,Oregon
+394,"9345 SE 82nd Ave, Happy Valley, OR 97086",clackamas county,Oregon
+395,"1550 NW 9th St, Corvallis, OR 97330",benton county,Oregon
+396,"85 Oakway Ctr, Eugene, OR 97401",lane county,Oregon
+397,"2285 NW 185th Ave, Hillsboro, OR 97124",washington county,Oregon
+398,"15391 SW Bangy Rd, Lake Oswego, OR 97035",clackamas county,Oregon
+399,"55 Rossanley Dr, Medford, OR 97501",jackson county,Oregon
+400,"4715 SE Cesar Chavez Blvd, Portland, OR 97202",multnomah county,Oregon
+401,"2122 NW Glisan, Portland, OR 97210",multnomah county,Oregon
+402,"4121 NE Halsey St, Portland, OR 97232",multnomah county,Nebraska
+403,"4450 Commercial St SE, Salem, OR 97302",marion county,Oregon
+404,"112 Coulter Ave, Ardmore, PA 19003",montgomery county,Pennsylvania
+405,"933 Old York Rd, Jenkintown, PA 19046",montgomery county,Pennsylvania
+406,"12 E State St, Media, PA 19063",delaware county,Pennsylvania
+407,"1430 Bethlehem Pike, PA",montgomery county,Pennsylvania
+408,"2121 Market St, Philadelphia, PA 19103",philadelphia county,Pennsylvania
+409,"6343 Penn Ave, Pittsburgh, PA 15206",allegheny county,Pennsylvania
+410,"1630 Washington Rd, Pittsburgh, PA 15241",allegheny county,Pennsylvania
+411,"9020 Covenant Ave, Pittsburgh, PA 15237",allegheny county,Pennsylvania
+412,"243 Patriot Ln, State College, PA 16803",centre county,Pennsylvania
+413,"171 E Swedesford Rd, Wayne, PA 19087",delaware county,Pennsylvania
+414,"1000 Bald Hill Rd, Warwick, RI 02886",kent county,Rhode Island
+415,"4516 Forest Dr, Columbia, SC 29206",richland county,South Carolina
+416,"59 Woodruff Industrial Ln, Greenville, SC 29607",greenville county,South Carolina
+417,"401 Johnnie Dodds Blvd, Mt. Pleasant, SC 29464",charleston county,South Carolina
+418,"3909 Hillsboro Pike, Nashville, TN 37215",davidson county,Tennessee
+419,"8001 Kingston Pike, Knoxville, TN 37919",knox county,Tennessee
+420,"9722 Great Hills Trail, Austin, TX 78759",travis county,Texas
+421,"211 Walter Seaholm Dr, Austin, TX 78701",travis county,Texas
+422,"2805 Bee Cave Rd, Austin, TX 78746",travis county,Texas
+423,"14856 Preston Rd, Dallas, TX 75254",dallas county,Texas
+424,"4525 Cole Ave, Dallas, TX 75205",dallas county,Texas
+425,"2001 Greenville Ave, Dallas, TX 75206",dallas county,Texas
+426,"7939 Walnut Hill Ln, Dallas, TX 75230",dallas county,Texas
+427,"5550 W Lovers Ln, Dallas, TX 75209",dallas county,Texas
+428,"2701 S Hulen St, Fort Worth, TX 76107",tarrant county,Texas
+429,"2922 S Shepherd Dr, Houston, TX 77098",harris county,Texas
+430,"1440 S Voss Rd, Houston, TX 77057",harris county,Texas
+431,"11683 Westheimer Rd, Houston, TX 77077",harris county,Texas
+432,"2717 Commercial Center Blvd, Katy, TX 77494",fort bend county,Texas
+433,"2851 Craig Dr, McKinney, TX 75070",collin county,Texas
+434,"2400 Preston Rd, Plano, TX 75093",collin county,Texas
+435,"350 E Basse Rd, San Antonio, TX 78209",bexar county,Texas
+436,"403 N Loop 1604 W, San Antonio, TX 78209",bexar county,Texas
+437,"1492 E Southlake Blvd, Southlake, TX 76092",tarrant county,Texas
+438,"10868 Kuykendahl Rd, The Woodlands, TX 77381",montgomery county,Texas
+439,"6989 S 1300 E, Cottonwood Heights, UT 84047",salt lake county,Utah
+440,"634 E 400 S, Salt Lake City, UT 84102",salt lake county,Utah
+441,"200 Dorset St, South Burlington, VT 05403",chittenden county,Vermont
+442,"612 N Saint Asaph St, Alexandria, VA 22314",city of alexandria county,Virginia
+443,"5847 Leesburg Pike, Bailey’s Crossroads, VA 22041",fairfax county,Virginia
+444,"14100 Lee Hwy, Centreville, VA 20120",fairfax county,Virginia
+445,"2025 Bond St, Charlottesville, VA 22901",albemarle county,Virginia
+446,"1109 N Highland St, Arlington, VA 22201",arlington county,Virginia
+447,"9464 Main St, Fairfax, VA 22031",fairfax county,Virginia
+448,"7514 Leesburg Turnpike, Falls Church, VA 22043",fairfax county,Virginia
+449,"12551 Jefferson Ave, Newport News, VA 23602",newport news city,Virginia
+450,"11958 Killingsworth Ave, Reston, VA 20194",fairfax county,Virginia
+451,"11331 W Broad St, Glen Allen, VA 23060",henrico county,Virginia
+452,"6394 Springfield Plaza, Springfield, VA 22150",fairfax county,Virginia
+453,"503 Hilltop Plaza, Virginia Beach, VA 23454",city of virginia beach county,Virginia
+454,"5000 Settlers Market Blvd, VA",james city county,Virginia
+455,"4609 14th Ave NW, Seattle, WA 98107",king county,Washington
+456,"416 116th Ave NE, Bellevue, WA 98004",king county,Nebraska
+457,"15563 NE 24th St, Bellevue, WA 98007",king county,Nebraska
+458,"2410 James St, Bellingham, WA 98225",whatcom county,Washington
+459,"15868 1st Ave S, Burien, WA 98148",king county,Washington
+460,"811 SE Everett Mall Way, Everett, WA 98208",snohomish county,Washington
+461,"1758 S 320th St, Federal Way, WA 98003",king county,Washington
+462,"975 NW Gilman Blvd, Issaquah, WA 98027",king county,Washington
+463,"12966 SE Kent-Kangley Rd, Kent, WA 98030",king county,Washington
+464,"12520 Totem Lake Blvd NE, WA",king county,Nebraska
+465,"4545 Fauntleroy Way SW, Seattle, WA 98116",king county,Washington
+466,"1201 N 175th St, Shoreline, WA 98133",king county,Washington
+467,"9991 Mickelberry Rd, Silverdale, WA 98383",kitsap county,Washington
+468,"2975 E 29th Ave, Spokane, WA 99223",spokane county,Washington
+469,"5520 N Division St, Spokane, WA 99208",spokane county,Washington
+470,"3800 Bridgeport Way W, University Place, WA 98466",pierce county,Washington
+471,"19500 Hwy 99, Lynnwood, WA 98036",snohomish county,Washington
+472,"1530 Black Lake Blvd, Olympia, WA 98502",thurston county,Washington
+473,"15932 Redmond Way, Redmond, WA 98052",king county,Washington
+474,"490 228th Ave NE, Sammamish, WA 98074",king county,Nebraska
+475,"4555 Roosevelt Way NE, Seattle, WA 98105",king county,Nebraska
+476,"1916 Queen Anne Ave N, Seattle, WA 98109",king county,Washington
+477,"1700 Madison St, Vancouver, WA",clark county,Washington
+478,"305 SE Chkalov Dr, Vancouver, WA 98683",clark county,Washington
+479,"12665 W Bluemound Rd, Brookfield, WI 53005",waukesha county,Wisconsin
+480,"5600 N Port Washington Rd, Glendale, WI 53217",milwaukee county,Wisconsin
+481,"1810 Monroe St, Madison, WI 53711",dane county,Wisconsin
