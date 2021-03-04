@@ -9,6 +9,13 @@ output: pdf_document
 knitr::opts_chunk$set(echo = FALSE, include=FALSE, warning=FALSE, message=FALSE)
 ```
 
+```{r imports}
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+library(hrbrthemes)
+```
+
 
 # Introduction
 
@@ -27,7 +34,7 @@ We use publicly available data online that can be downloaded for the list of sit
 We will use the 2020 presidential election results from a county as our dependent variable, which will be a binary variable of whether the county voted Democratic or Republican, to measure the political leanings of a county. For our independent variables, we will have four variables that each correspond to whether a county contains one of the four retailers that are the focus of this analysis. In addition to these variables, we will include indpendent variables that are usually included in analyses of a county's political leanings. These variables are borrowed from Kahane, and they include population totals by race, population totals by gender, education levels, poverty rates, the median income of the county, unemployment rates, and whether the county is urban or rural (Kahane, 2020). We exclude certain variables that we did not have access to, such as religion in our analysis.
 
 ```{r}
-read.csv("data/final_data.csv")
+main_data <- read.csv("data/final_data.csv")
 ```
 
 ## Existing Literature
@@ -38,7 +45,45 @@ Despite all of the attention to these trends, there does not seem to a published
 
 ## EDA
 
+```{r}
+main_data$winner <- as.factor(ifelse(main_data$votes_gop>main_data$votes_dem, "Republican", "Democrat"))
+main_data$trader_joes <- main_data$trader_joes=="True"
+main_data$cabelas <- main_data$cabelas=="True"
+main_data$cinemark <- main_data$cinemark =="True"
+main_data$nordstrom <- main_data$nordstrom=="True"
+```
 
+```{r, include=TRUE}
+# https://www.r-graph-gallery.com/48-grouped-barplot-with-ggplot2.html
+# https://stackoverflow.com/questions/14622421/how-to-change-legend-title-in-ggplot
+
+
+ggplot(main_data, aes(fill=trader_joes, x=winner)) + 
+    geom_bar(position="fill", stat="count") +
+labs(title="Percent of Counties Won by Party Based on Trader Joe's in County", 
+     x = "County Winner", y = "Percent of Counties Won by Party") +
+  scale_fill_discrete(name = "Trader Joe's in County")
+
+ggplot(main_data, aes(fill=nordstrom, x=winner)) + 
+    geom_bar(position="fill", stat="count") +
+labs(title="Percent of Counties Won by Party Based on Nordstrom in County", 
+     x = "County Winner", y = "Percent of Counties Won by Party") +
+  scale_fill_discrete(name = "Nordstrom in County")
+
+ggplot(main_data, aes(fill=cabelas, x=winner)) + 
+    geom_bar(position="fill", stat="count") +
+labs(title="Percent of Counties Won by Party Based on Cabela's in County", 
+     x = "County Winner", y = "Percent of Counties Won by Party") +
+  scale_fill_discrete(name = "Cabela's in County")
+
+ggplot(main_data, aes(fill=cinemark, x=winner)) + 
+    geom_bar(position="fill", stat="count") +
+labs(title="Percent of Counties Won by Party Based on Cinemark in County", 
+     x = "County Winner", y = "Percent of Counties Won by Party") +
+  scale_fill_discrete(name = "Cinemark in County")
+```
+
+These graphs show that regardless of the retailer, it appears as if Democrats won counties that contained the retailer more often Republicans. Although, this trend appears to be greater for Trader Joe's and Nordstrom than Cabela's and Cinemark.
 
 
 # References
@@ -56,18 +101,16 @@ Wasserman, D. (2020, December 08). Fact: Biden won the presidency Winning 85% of
 
 ## Data
 
-https://www.traderjoes.com/pdf/Trader-Joes-Stores.pdf
-http://nordstromsupplier.com/Content/sc_manual/Store_Address_List.pdf
-https://www.fandango.com/movie-theaters/cinemark
-https://stores.cabelas.com/
-https://www.census.gov/data-tools/demo/saipe/#/?map_geoSelector=mhi_c&s_measures=mhi_snc&s_year=2019
-https://www.ers.usda.gov/data-products/county-level-data-sets/download-data/
+Trader-Joes-Stores.pdf. (2020). Retrieved March 03, 2021, from https://www.traderjoes.com/pdf/Trader-Joes-Stores.pdf
 
+Nordstrom Store Addresses. (2020, June 1). Retrieved March 03, 2021, from http://nordstromsupplier.com/Content/sc_manual/Store_Address_List.pdf
+
+Cinemark Movie Theater Locations. (2021). Retrieved March 04, 2021, from https://www.fandango.com/movie-theaters/cinemark
+
+All Cabela's Locations: Sporting goods &amp; outdoor stores. (2021). Retrieved March 04, 2021, from https://stores.cabelas.com/
+
+Small Area Income and Poverty Estimates (SAIPE). (n.d.). Retrieved March 04, 2021, from https://www.census.gov/data-tools/demo/saipe/#/?map_geoSelector=mhi_c&amp;s_measures=mhi_snc&amp;s_year=2019
+
+Economic Research Service - Download data. (2021, February 24). Retrieved March 04, 2021, from https://www.ers.usda.gov/data-products/county-level-data-sets/download-data/
 
 Tonmcg. (2020). Us_county_level_election_results_08-20. Retrieved March 03, 2021, from https://github.com/tonmcg/US_County_Level_Election_Results_08-20
-
-
-
-
-
-## Data Modelling
