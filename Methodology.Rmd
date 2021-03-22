@@ -1,0 +1,202 @@
+---
+title: "Correlation between the Presence of Big Box Retailers and a County's Political Leanings"
+author: "Pouya Mohammadi"
+output: pdf_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, include=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+library(hrbrthemes)
+```
+
+
+# Introduction
+
+In recent election cycles, election analysts such as Dave Wasserman have pointed to an interesting metric and its being highly correlated with the results of United States (US) presidential elections. This metric is whether the county contains a Whole Foods or a Cracker Barrel (Wasserman, 2020). This has lead to a flurry of analyses about how the presence of different big box retailers is correlated to that area's political leanings. NBC News,  Time Magazine, and The New York Times have all recently reported on similar trends with varying reatilers, and on Twitter after the 2020 election, there was speculation that the presence of a Trader Joe’s was becoming a valid indicator for the direction in which a county would vote in the election ("Broke: Joe", 2021).
+
+These trends are important as computational politics becomes of ever-increasing importance in modern political campaigns. In elections that are decided by the slimmest of margins, such as the US presidential election of 2000 that was decided by less than 600 votes, every informational advantage that a campaign has can be of use and drastically influence the politics and future of the United States and the world (Glass, 2018). By understanding the relationships between the counties that certain big box retailers are located in and the political preferences of that county, campaigns may be able to draw insights into the ways that communities' shopping habits correspond with their politics and more effectively and efficiently communicate with potential voters. In addition to providing insight into the politics of communities, this method of using the presence of big box retailers in a county to infer information about politics is computationally efficient and far less expensive than big data methods that rely on storing and analyzing information on an individual basis.
+  
+Our case study aims to analyze the presence of a new set of big box retailers in US counties and understand the ways that the presence of these counties corresponds with that county's political leanings. In particular, the stores that we will be focusing on are Trader Joe's, Cinemark, Cabela's, and Nordstrom. These stores were chosen because of our belief that they will capture information about the different voting blocks in the US electorate incredibly well. Aside from Trader Joe's, all of these stores have yet to be the subject of a rigorous analysis that relates their presence to political leanings. Trader Joe's was included because we believe that it corresponds to a different voting block than the other stores that we chose and the fact that the body of work on the political leanings of "Trader Joe's counties" is new and does not include a methodology similar to ours. Our null hypothesis is that we do not expect there to be a relation between any of the stores and the political leanings of the counties in which these retailers are located.
+  
+  
+## Data
+
+We use publicly available data online that can be downloaded for the list of sites in the Data subsection of our References. These include open-source government databases as well as public location listings by private companies. The 2020 presidential election results that we use to measure a county's political leanings are borrowed from the GitHub user \@tonmcg, who developed the datasets from information provided by The Guardian, townhall.com, Fox News, Politico, and the New York Times (Tonmcg, 2020). All of the government provided databases are estimations of the current values based onthe most US Census which occurred in 2010 and trends in the data since that time. Finally, the location listings are either provided by the stores themselves or reputable third-party sources, such as Fandango. We use the 'geopy' Python library to map these locations to their corresponding geographical county. Any locations whose counties cannot be found by the Python library are hand-encoded. Because Alaska does not use counties in their voting procedures, we will remove all of Alaska's voting districts from our dataset. While this solution is not ideal, we do not feel comfortable using two different region distinctions in the calculation of our dependent variable and there is other way to map these voting districts to counties given the data that we have access to.  
+
+We will use the percentage of votes for the Democratic party in the 2020 presidential election results from a county as our dependent variable, which will be a numeric variable between 0 and 1, to measure the political leanings of a county. For our independent variables, we will have four variables that each correspond to whether a county contains one of the four retailers that are the focus of this analysis. In addition to these variables, we will include indpendent variables that are usually included in analyses of a county's political leanings. These variables are borrowed from Kahane, and they include population totals by race, population totals by gender, education levels, poverty rates, the median income of the county, unemployment rates, and whether the county is urban or rural (Kahane, 2020). We exclude certain variables that we did not have access to, such as religion in our analysis.
+
+```{r}
+main_data <- read.csv("data/final_data.csv")
+```
+
+## Existing Literature
+
+As mentioned previously, plenty of news networks have completed analyses about the ways that big box retailers' locations correspond to political leanings in a county. In particular, NBC News, Time Magazine, and The New York Times have conduced analyses on this phenomenon. The New York Times in their analysis, found that, without controlling for other factors, the presence of a Trader Joe's corresponded with better results for Democrats. The analysis discovered that Democrats won areas that were within five miles of a Trader Joe's by 33 points. Time magazine discovered a similar trend in that Democrats won districts with a Trader Joe's by 30 points in 2014 US congressional races. A different study by Aaron Lee that employs a random forest machine learning model that uses 20 big box retailers discovered that counties that contain a Trader Joe's lean democratic with a feature importance of about 0.11 (Lee, 2020).
+
+Despite all of the attention to these trends, there does not seem to a published work on the topic. We expand on these past analyses by analyzing a new set of big box retailers and their presence's relation to political leanings in a county. We also control for other variables that are customarily used in predicting a county's political leaning, which has yet to be done in a scientific analysis. We gather this list of variables from Kahane, and we explore whether the presence of these big box retailers will provide more significant relationships to a county's political leaning than the standard covariates.
+
+## EDA
+
+```{r}
+main_data$winner <- as.factor(ifelse(main_data$votes_gop>main_data$votes_dem, "Republican", "Democrat"))
+main_data$trader_joes <- main_data$trader_joes=="True"
+main_data$cabelas <- main_data$cabelas=="True"
+main_data$cinemark <- main_data$cinemark =="True"
+main_data$nordstrom <- main_data$nordstrom=="True"
+```
+
+```{r, include=TRUE}
+# http://www.sthda.com/english/wiki/ggplot2-add-straight-lines-to-a-plot-horizontal-vertical-and-regression-lines
+
+ggplot(main_data, aes(x = trader_joes, y = per_dem)) +
+  geom_boxplot() +
+  labs(title="Counties with a Trader Joes Vote for Dems at a Higher Percentage on Average", 
+     x = "Trader Joes in County", y = "% of Votes for Democrats in County") +
+  geom_hline(yintercept = 0.5, linetype="dashed", color = "red")
+
+ggplot(main_data, aes(x = nordstrom, y = per_dem)) +
+  geom_boxplot() +
+  labs(title="Counties with a Nordstrom Vote for Dems at a Higher Percentage on Average", 
+     x = "Nordstrom in County", y = "% of Votes for Democrats in County") +
+  geom_hline(yintercept = 0.5, linetype="dashed", color = "red")
+
+ggplot(main_data, aes(x = cabelas, y = per_dem)) +
+  geom_boxplot() +
+  labs(title="Counties with a Cabela's Vote for Dems at a Higher Percentage on Average",
+       subtitle="However, Democrats did not receive a majority of the votes in counties with a Caebla's",
+     x = "Cabela's in County", y = "% of Votes for Democrats in County") +
+  geom_hline(yintercept = 0.5, linetype="dashed", color = "red")
+
+ggplot(main_data, aes(x = cinemark, y = per_dem)) +
+  geom_boxplot() +
+  labs(title="Counties with a Cinemark Vote for Dems at a Higher Percentage on Average", 
+       subtitle = "Democrats received 50% of the Vote in Counties with a Cinemark on average",
+     x = "Cinemark in County", y = "% of Votes for Democrats in County") +
+  geom_hline(yintercept = 0.5, linetype="dashed", color = "red")
+```
+
+
+```{r, include=FALSE}
+# https://www.r-graph-gallery.com/48-grouped-barplot-with-ggplot2.html
+# https://stackoverflow.com/questions/14622421/how-to-change-legend-title-in-ggplot
+
+
+ggplot(main_data, aes(fill=trader_joes, x=winner)) + 
+    geom_bar(position="fill", stat="count") +
+labs(title="Percent of Counties Won by Party Based on Trader Joe's in County", 
+     x = "County Winner", y = "Percent of Counties Won by Party") +
+  scale_fill_discrete(name = "Trader Joe's in County")
+
+ggplot(main_data, aes(fill=nordstrom, x=winner)) + 
+    geom_bar(position="fill", stat="count") +
+labs(title="Percent of Counties Won by Party Based on Nordstrom in County", 
+     x = "County Winner", y = "Percent of Counties Won by Party") +
+  scale_fill_discrete(name = "Nordstrom in County")
+
+ggplot(main_data, aes(fill=cabelas, x=winner)) + 
+    geom_bar(position="fill", stat="count") +
+labs(title="Percent of Counties Won by Party Based on Cabela's in County", 
+     x = "County Winner", y = "Percent of Counties Won by Party") +
+  scale_fill_discrete(name = "Cabela's in County")
+
+ggplot(main_data, aes(fill=cinemark, x=winner)) + 
+    geom_bar(position="fill", stat="count") +
+labs(title="Percent of Counties Won by Party Based on Cinemark in County", 
+     x = "County Winner", y = "Percent of Counties Won by Party") +
+  scale_fill_discrete(name = "Cinemark in County")
+```
+
+These graphs show that regardless of the retailer, it appears as if Democrats performed better counties that contained the retailer more often Republicans. Although, this trend appears to be greater for Trader Joe's and Nordstrom than Cabela's and Cinemark.
+
+# Methodology
+
+In order to analyze whether the presence of big box retailers corresponds with a county's political leanings, we will utilize a beta regression model using the percentage of votes in the county cast for Democrats during the 2020 president election as our dependent variable. We chose this dependent variable since the percentage of votes that a party receives is the best measure of a county's political leanings in the United States, given that the United States is a largely two-party political system. By using the percentage of votes for Democrats, we can capture information that we would not be able to if we simply used a binary indicator for which party won the county. For instance, a county that Democrats won by 0.2 percentage points would be regarded equally to a county that Democrats won by 50 percentage points, when in reality, one county is a swing district and the other is a staunchly Democratic county. We use the percentage of Democratic votes instead of Republican votes since we believed it would increase interpretability given that our EDA indicated that most counties with one of our four stores will mostly vote for Democrats. However, in our sensitivity analysis in the appendix, we repeat our analysis using the percentage of Republican votes in a county and find that the results are largely the same because of the two party system in the United States.
+
+Our analysis employs a beta regression model. However, other models were considered as well, such as a linear regression model, an OLS model, a poisson model with an offset, and a negative binomial model with an offset. We do not use a linear regression model since our response variable is bounded between 0 and 1, which a linear regression model does not account for. We do not use the OLS model because our dependent variable has values that are close to 0 and as a result, the OLS model could run into the same issue that the linear regression model faces where it does not bound the dependent variable distribution between 0 and 1. Finally, the percentage of votes in a county is a count of the votes for a party divided by the count of total votes in the county, which can be modeled via a model of count data with an offset. In these models, our dependent variable would be the count of votes for a party and the offset would be the total votes in that county. However, we see that a Poisson model is not viable since the mean count of votes for both parties is not equal to the variance of the count of votes for that party, an assumption of the poisson model. We then consider a negative binomial model which assumes that the mean of the dependent count variable is not equal to its variance. However, when performing some EDA, which can be found in the Appendix, we found that the count of votes for either party does not fit a negative binomial distribution despite the fact that it is count data with overdispersion. Instead, the beta regression model assumes that the response variable follows a beta distribution, which we see in our response variable. 
+
+
+```{r}
+hist(main_data$votes_dem)
+
+var(main_data$votes_dem)
+mean(main_data$votes_dem)
+
+var(main_data$votes_dem)/mean(main_data$votes_dem)
+
+library(vcd)
+
+distplot(main_data$votes_dem, type="nbinom", main = "Negative binomialness plot shows the negative binomial distribution is appropriate", xlab = "Adverse Event Count", conf_int = T)
+
+main_data %>% group_by(winner) %>% summarise(count = n())
+
+hist(main_data$per_gop)
+hist(main_data$per_dem)
+hist(main_data$per_point_diff)
+```
+ 
+
+
+The methodology section should clearly explain the model(s) used in your 
+analysis. You must clearly state your model formulation using appropriate
+mathematical notation and justify their use, and address any model assumptions 
+or diagnostics needed. In writing the methodology, make sure you
+address the following points:
+
+- Is the proposed analysis appropriate given the main goal(s) and dataset?
+- Why was this particular methodology chosen over competing choices?
+- Are the specific methods described in enough detail that the work could be
+replicated by other researchers *without* access to the original analysis code?
+- Is it clear which approaches/models were used to evaluate specific goals?
+- What assumptions are needed for the model(s), and how do you plan to assess
+whether they hold?
+- What sensitivity analyses, if any, are planned, and how do they relate to your
+analysis approach?
+
+You may include technical derivations and evaluation of model diagnostics and
+assumptions in the appendix to your manuscript; they do not belong in the body
+of your work.
+
+# Appendix
+
+```{r}
+distplot(main_data$votes_dem, type="nbinom", main = "Negative binomialness plot shows the negative binomial distribution is not appropriate", xlab = "Votes for Democrats Count", conf_int = T)
+
+distplot(main_data$votes_gop, type="nbinom", main = "Negative binomialness plot shows the negative binomial distribution is not appropriate", xlab = "Votes for Republicans Count", conf_int = T)
+```
+
+
+# References
+
+Glass, A. (2018, December 12). Bush declared Electoral victor Over Gore, Dec. 12, 2000. Retrieved March 03, 2021, from https://www.politico.com/story/2018/12/12/scotus-declares-bush-electoral-victor-dec-12-2000-1054202
+
+Kahane, L. H. (2020). Determinants of County-Level voting patterns in the 2012 and 2016 presidential elections. Applied Economics, 52(33), 3574-3587. doi:10.1080/00036846.2020.1713985
+
+Lee, A. (2020, September 29). Trader Joe's Democrats and Walmart Republicans. Retrieved March 04, 2021, from https://towardsdatascience.com/are-you-a-trader-joes-democrat-or-a-walmart-republican-a7b156131435
+
+M. (2021, February 16). Broke: Joe Biden did so well in counties with a Trader Joe's because the audience for Trader Joe's is composed of favorable Democratic demographics Woke: Joe Biden did so well in counties with a Trader Joe's because voters thought he was Trader Joe. Retrieved March 03, 2021, from https://twitter.com/maxtmcc/status/1361504297477890050
+
+Wasserman, D. (2020, December 08). Fact: Biden won the presidency Winning 85% of counties with a Whole foods and 32% of counties with a Cracker barrel - the widest gap ever. Retrieved March 03, 2021, from https://twitter.com/Redistrict/status/1336342894630858755
+
+
+## Data
+
+Trader-Joes-Stores.pdf. (2020). Retrieved March 03, 2021, from https://www.traderjoes.com/pdf/Trader-Joes-Stores.pdf
+
+Nordstrom Store Addresses. (2020, June 1). Retrieved March 03, 2021, from http://nordstromsupplier.com/Content/sc_manual/Store_Address_List.pdf
+
+Cinemark Movie Theater Locations. (2021). Retrieved March 04, 2021, from https://www.fandango.com/movie-theaters/cinemark
+
+All Cabela's Locations: Sporting goods &amp; outdoor stores. (2021). Retrieved March 04, 2021, from https://stores.cabelas.com/
+
+Small Area Income and Poverty Estimates (SAIPE). (n.d.). Retrieved March 04, 2021, from https://www.census.gov/data-tools/demo/saipe/#/?map_geoSelector=mhi_c&amp;s_measures=mhi_snc&amp;s_year=2019
+
+Economic Research Service - Download data. (2021, February 24). Retrieved March 04, 2021, from https://www.ers.usda.gov/data-products/county-level-data-sets/download-data/
+
+Tonmcg. (2020). Us_county_level_election_results_08-20. Retrieved March 03, 2021, from https://github.com/tonmcg/US_County_Level_Election_Results_08-20

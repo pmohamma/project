@@ -1,0 +1,14 @@
+---
+title: "Workspace"
+author: "Pouya Mohammadi"
+date: "3/22/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Limitations
+
+Talk about how using percentage of democratic votes is valid since the US is largely a 2 party system. However, this does not account for the maximum <5% of votes in a county that are given to 3rd party candidates and could cause problems, since we sort of make the assumption that gop and dem are the only ones that get votes.
