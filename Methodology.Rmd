@@ -14,6 +14,9 @@ library(ggplot2)
 library(tidyr)
 library(dplyr)
 library(hrbrthemes)
+library(vcd)
+library(knitr)
+library(betareg)
 ```
 
 
@@ -117,62 +120,100 @@ These graphs show that regardless of the retailer, it appears as if Democrats pe
 
 # Methodology
 
-In order to analyze whether the presence of big box retailers corresponds with a county's political leanings, we will utilize a beta regression model using the percentage of votes in the county cast for Democrats during the 2020 president election as our dependent variable. We chose this dependent variable since the percentage of votes that a party receives is the best measure of a county's political leanings in the United States, given that the United States is a largely two-party political system. By using the percentage of votes for Democrats, we can capture information that we would not be able to if we simply used a binary indicator for which party won the county. For instance, a county that Democrats won by 0.2 percentage points would be regarded equally to a county that Democrats won by 50 percentage points, when in reality, one county is a swing district and the other is a staunchly Democratic county. We use the percentage of Democratic votes instead of Republican votes since we believed it would increase interpretability given that our EDA indicated that most counties with one of our four stores will mostly vote for Democrats. However, in our sensitivity analysis in the appendix, we repeat our analysis using the percentage of Republican votes in a county and find that the results are largely the same because of the two party system in the United States.
+## Motivation
 
-Our analysis employs a beta regression model. However, other models were considered as well, such as a linear regression model, an OLS model, a poisson model with an offset, and a negative binomial model with an offset. We do not use a linear regression model since our response variable is bounded between 0 and 1, which a linear regression model does not account for. We do not use the OLS model because our dependent variable has values that are close to 0 and as a result, the OLS model could run into the same issue that the linear regression model faces where it does not bound the dependent variable distribution between 0 and 1. Finally, the percentage of votes in a county is a count of the votes for a party divided by the count of total votes in the county, which can be modeled via a model of count data with an offset. In these models, our dependent variable would be the count of votes for a party and the offset would be the total votes in that county. However, we see that a Poisson model is not viable since the mean count of votes for both parties is not equal to the variance of the count of votes for that party, an assumption of the poisson model. We then consider a negative binomial model which assumes that the mean of the dependent count variable is not equal to its variance. However, when performing some EDA, which can be found in the Appendix, we found that the count of votes for either party does not fit a negative binomial distribution despite the fact that it is count data with overdispersion. Instead, the beta regression model assumes that the response variable follows a beta distribution, which we see in our response variable. 
+In order to analyze whether the presence of big box retailers corresponds with a county's political leanings, we will utilize a beta regression model using the percentage of votes in the county cast for Democrats during the 2020 president election as our dependent variable. We chose this dependent variable since the percentage of votes that a party receives is the best measure of a county's political leanings in the United States, given that the United States is a largely two-party political system. By using the percentage of votes for Democrats, we can capture information that we would not be able to if we simply used a binary indicator for which party won the county. For instance, a county that Democrats won by 0.2 percentage points would be regarded equally to a county that Democrats won by 50 percentage points, when in reality, one county is a swing district and the other is a staunchly Democratic county. We use the percentage of Democratic votes instead of Republican votes since we believed it would increase interpretability given that our EDA indicated that most counties with one of our four stores will mostly vote for Democrats. However, in our sensitivity analyses in the appendix, we repeat our analysis using the percentage of Republican votes in a county and find that the results are largely the same because of the two party system in the United States.
 
+Our analysis employs a beta regression model. However, other models were considered as well, such as a linear regression model, an OLS model, a poisson model with an offset, and a negative binomial model with an offset. We do not use a linear regression model since our response variable is bounded between 0 and 1, which a linear regression model does not account for. We do not use the OLS model because our dependent variable has values that are close to 0 and as a result, the OLS model could run into the same issue that the linear regression model faces where it does not bound the dependent variable distribution between 0 and 1. Finally, the percentage of votes in a county is a count of the votes for a party divided by the count of total votes in the county, which can be modeled via a model of count data with an offset. In these models, our dependent variable would be the count of votes for a party and the offset would be the total votes in that county. However, we see that a Poisson model is not viable since the mean count of votes for both parties is not equal to the variance of the count of votes for that party, an assumption of the poisson model. We then consider a negative binomial model which assumes that the mean of the dependent count variable is not equal to its variance. However, when performing some EDA, which can be found in the Appendix, we found that the count of votes for either party does not fit a negative binomial distribution despite the fact that it is count data with overdispersion. Instead, the beta regression model assumes that the response variable follows a beta distribution, a distribution of values between 0 and 1. Our response variable does the same and has a single mode, which is similar to a beta distribution again. This is further discussed and visualized in Appendix. In general, the beta distribution is incredibly applicable for proportion data, such as the percentage of votes for a party in a county (Ferrari et al., 2004). Since the only other assumption for a beta regression model is that there is a linear relationship between the predictors and the response variable, we feel confident employing a beta regression model, since the percentage of democratic votes in a county falls between 0 and 1, similar to a beta distribution.
+
+We check both the assumptions of the beta regression model that the response variable follows a beta distribution and that the response variable is linearly related to the predictors in the appendix. 
+
+## Model Formula
+ 
+education levels, poverty rates, the median income of the county, unemployment rates, and whether the county is urban or rural
+ 
+$$
+\begin{aligned}
+link(\mu_i) = &\beta_0 + \beta_1 * (Trader.Joes.in.County_i=True) + \beta_2 * (Cabelas.in.County_i=True) + \\
+&\beta_3 * (Cinemark.in.County_i=True) + \beta_4 * (Nordstrom.in.County_i=True) + \\
+&\beta_5 * (White.Population) + \beta_6 * (Black.Population) + \beta_7 * (Hispanic.Population) + \\
+&\beta_8 * (Asian.Population) + \beta_9 * (Male.Population) + \beta_{10} * (Female.Population) + \\
+&\beta_{11} * (Percent.with.College.Education) + \beta_{12} * (Percent.in.Poverty) + \\
+&\beta_{13} * (Percent.Unemployed) + \beta_{14} *(Urban.County=True)
+\end{aligned}
+$$
+
+where $\mu_i$ is an observation-specific mean for $Percent.Democratic_i$ and we separately estimate the precision parameter for the distribution on the mean to be $\phi_i =  precision\_link(\phi_i)$.
+
+## Sensitivity Analyses
+
+We will perform a few sensitivity analyses in which we compare the performance of different models. The first model that we will test is replacing the response variable in our original model with the percentage of republican votes in a county in order to see if there is no significant difference between these two models as we hypothesized by assuming that the two-party system would make third-party votes negligible. We will conduct another sensitivity analysis in which we use a ANOVA test with our original model and a model that does not contain any store data in order to see if there is a significant difference in a traditional model of county affiliation and one that includes the store locations.
 
 ```{r}
-hist(main_data$votes_dem)
 
-var(main_data$votes_dem)
-mean(main_data$votes_dem)
+betaMod <- betareg(per_dem ~ trader_joes + cabelas + cinemark + nordstrom + white_pop + 
+                     black_pop + hispanic_pop + asian_pop + male_pop + female_pop +
+                     percent_educated + percent_poverty + Unemployment_rate_2019 +
+                     Metro_2013, data = main_data)
+summary (betaMod)
 
-var(main_data$votes_dem)/mean(main_data$votes_dem)
-
-library(vcd)
-
-distplot(main_data$votes_dem, type="nbinom", main = "Negative binomialness plot shows the negative binomial distribution is appropriate", xlab = "Adverse Event Count", conf_int = T)
-
-main_data %>% group_by(winner) %>% summarise(count = n())
-
-hist(main_data$per_gop)
-hist(main_data$per_dem)
-hist(main_data$per_point_diff)
 ```
- 
 
-
-The methodology section should clearly explain the model(s) used in your 
-analysis. You must clearly state your model formulation using appropriate
-mathematical notation and justify their use, and address any model assumptions 
-or diagnostics needed. In writing the methodology, make sure you
-address the following points:
-
-- Is the proposed analysis appropriate given the main goal(s) and dataset?
-- Why was this particular methodology chosen over competing choices?
-- Are the specific methods described in enough detail that the work could be
-replicated by other researchers *without* access to the original analysis code?
-- Is it clear which approaches/models were used to evaluate specific goals?
-- What assumptions are needed for the model(s), and how do you plan to assess
-whether they hold?
-- What sensitivity analyses, if any, are planned, and how do they relate to your
-analysis approach?
-
-You may include technical derivations and evaluation of model diagnostics and
-assumptions in the appendix to your manuscript; they do not belong in the body
-of your work.
 
 # Appendix
 
-```{r}
-distplot(main_data$votes_dem, type="nbinom", main = "Negative binomialness plot shows the negative binomial distribution is not appropriate", xlab = "Votes for Democrats Count", conf_int = T)
+## Model Motivation
 
-distplot(main_data$votes_gop, type="nbinom", main = "Negative binomialness plot shows the negative binomial distribution is not appropriate", xlab = "Votes for Republicans Count", conf_int = T)
+```{r}
+# If needed: 
+
+# We see below that that the number of counties that Republicans won is far greater than the number of counties that Democrats won in 2020. In addition to the fact that we believe percentage 
+
+# main_data %>% group_by(winner) %>% summarise(count = n())
 ```
 
 
+We see from the plots below that the mean and variance of the votes for each party are not equivalent indicating that while the data is count data, it does not follow the poisson distribution and a poisson regression cannot be used here.
+
+```{r, include=T}
+# https://github.com/sta440-sp21/case-01-team-04
+
+dem_votes_var <- var(main_data$votes_dem)
+dem_votes_mean <- mean(main_data$votes_dem)
+dem_votes_ratio <- var(main_data$votes_dem)/mean(main_data$votes_dem)
+
+gop_votes_var <- var(main_data$votes_gop)
+gop_votes_mean <- mean(main_data$votes_gop)
+gop_votes_ratio <- var(main_data$votes_gop)/mean(main_data$votes_gop)
+
+t(data.frame(mean=c(dem_votes_mean, gop_votes_mean), variance=c(dem_votes_var, gop_votes_var), ratio = c(dem_votes_ratio, gop_votes_ratio))) %>% 
+  kable(format = "markdown", digits = 1, col.names = c("Democratic Vote Count", "Republican Vote Count"))
+```
+
+
+From the plots below, we see that neither the votes for Democrats in a county nor the votes for Republicans in a county follows a negative binomial distribution.
+
+```{r, include=T}
+distplot(main_data$votes_dem, type="nbinom", main = "Negative binomialness plot shows the negative binomial distribution is not appropriate", xlab = "Votes for Democrats Count", conf_int = F, legend=F)
+
+distplot(main_data$votes_gop, type="nbinom", main = "Negative binomialness plot shows the negative binomial distribution is not appropriate", xlab = "Votes for Republicans Count", conf_int = F, legend=F)
+```
+
+Below, we see that both the percentage of votes that Democrats received in a county and the percentage of votes that Republicans received in a county follow a beta distribution.
+
+```{r, include=T}
+ggplot(data=main_data, mapping=aes(x=per_dem)) +
+  geom_histogram()
+
+ggplot(data=main_data, mapping=aes(x= per_gop)) +
+  geom_histogram()
+```
+
+
+
 # References
+
+Ferrari, Silvia, and Francisco Cribari-Neto. “Beta Regression for Modelling Rates and Proportions.” Journal of Applied Statistics 31, no. 7 (2004): 799–815. https://doi.org/10.1080/0266476042000214501. 
 
 Glass, A. (2018, December 12). Bush declared Electoral victor Over Gore, Dec. 12, 2000. Retrieved March 03, 2021, from https://www.politico.com/story/2018/12/12/scotus-declares-bush-electoral-victor-dec-12-2000-1054202
 
