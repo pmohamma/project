@@ -9,6 +9,11 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+The EDA is a bit strange in terms of the conditioning - you are looking within counties' political leanings. But would it make more sense to display, given a county has each type of score, the proportion that were Democrat vs. Republican? As well, I suspect that there are much more Republican counties than Democrat counties, though population-wise they are much more similar. These relationships are lost in the EDA, since only proportions are shown. Consider examining absolute population- or county-level counts as well.
+
+^^ ASK ABOUT THIS. NOT SURE WHAT THIS MEANS
+
+
 # Takeaways
 
 Something about how this could be similar to the waffle house index but for politics
