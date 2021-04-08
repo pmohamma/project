@@ -11,12 +11,16 @@ knitr::opts_chunk$set(echo = FALSE, include=FALSE, warning=FALSE, message=FALSE)
 
 ```{r imports}
 library(ggplot2)
-library(tidyr)
+library(ggpubr)
+library(tidyverse)
 library(dplyr)
 library(hrbrthemes)
 library(vcd)
 library(knitr)
 library(betareg)
+library(repmod)
+library(finalfit)
+library(kableExtra)
 ```
 
 
@@ -35,18 +39,24 @@ Aside from Trader Joe's, all of these stores have yet to be the subject of a rig
 
 We use publicly available data online that can be downloaded for the list of sites in the Data subsection of our References. These include open-source government databases as well as public location listings by private companies. The 2020 presidential election results that we use to measure a county's political leanings are borrowed from the GitHub user \@tonmcg, who developed the datasets from information provided by The Guardian, townhall.com, Fox News, Politico, and the New York Times (Tonmcg, 2020). All of the government provided databases are estimations of the current values based on the most US Census which occurred in 2010 and trends in the data since that time. Finally, the location listings are either provided by the stores themselves or reputable third-party sources, such as Fandango. We use the 'geopy' Python library to map these locations to their corresponding geographical county. Any locations whose counties cannot be found by the Python library are hand-encoded. Because Alaska uses electoral districts instead of counties in their voting procedures, we will not consider Alaska in this analysis and remove all data from Alaska in our dataset prior to analysis. While this solution is not ideal, it is consistent with previous literature and prudent since we do not feel comfortable using two different region distinctions in the calculation of our dependent variable (Gomez et al., 2007).  
 
-We will use the percentage of votes for the Democratic party in the 2020 presidential election results from a county as our dependent variable, which will be a numeric variable between 0 and 1, to measure the political leanings of a county. For our independent variables, we will have four binary variables that each correspond to whether a county contains one of the four retailers that are the focus of this analysis. Each county will have a 1 for the respective variable if the county contains the retailer and a 0 if it does not contain the retailer. In addition to these variables, we will include indpendent variables that are usually included in analyses of a county's political leanings. These variables are borrowed from Kahane, and they include population totals by race, population totals by gender, education levels, poverty rates, the median income of the county, unemployment rates, and whether the county is urban or rural (Kahane, 2020). We exclude certain variables that we did not have access to, such as religion in our analysis.
+We will use the percentage of votes for the Democratic party in the 2020 presidential election results from a county as our dependent variable, which will be a numeric variable between 0 and 1, to measure the political leanings of a county. For our independent variables, we will have four numeric variables that each correspond to the number of stores per 100,000 residents in a county. Each variable will correspond to one of the 4 stores that we are considering in this analysis. In addition to these variables, we will include indpendent variables that are usually included in analyses of a county's political leanings. These variables are borrowed from Kahane, and they include population totals by race, population totals by gender, education levels, poverty rates, the median income of the county, unemployment rates, and whether the county is urban or rural (Kahane, 2020). We exclude certain variables that we did not have access to, such as religion in our analysis.
 
 
 ```{r}
 # https://medium.com/@tyagi.sudarshini/how-to-shuffle-a-dataframe-in-r-by-rows-e7971cd7949e
 main_data <- read.csv("data/final_data.csv")
-main_data <- main_data %>% filter(state_name != "Alaska") %>% select(-c(X))
+main_data <- main_data %>% filter(state_name != "Alaska") # %>% select(-c(X))
 
 # shuffle rows so that there is no covariance between adjacent observations that are in the same state
 set.seed(5)
 rows <- sample(nrow(main_data))
 main_data <- main_data[rows, ]
+main_data$perc_male <- main_data$male_pop/main_data$total_pop
+main_data$perc_female <- main_data$female_pop/main_data$total_pop
+main_data$perc_white <- main_data$white_pop/main_data$total_pop
+main_data$perc_black <- main_data$black_pop/main_data$total_pop
+main_data$perc_hispanic <- main_data$hispanic_pop/main_data$total_pop
+main_data$perc_asian <- main_data$asian_pop/main_data$total_pop
 ```
 
 ## Existing Literature
@@ -68,31 +78,31 @@ main_data$nordstrom <- main_data$nordstrom=="True"
 ```{r, include=TRUE}
 # http://www.sthda.com/english/wiki/ggplot2-add-straight-lines-to-a-plot-horizontal-vertical-and-regression-lines
 
-ggplot(main_data, aes(x = trader_joes, y = per_dem)) +
-  geom_boxplot() +
-  labs(title="Counties with a Trader Joes Vote for Dems at a Higher Percentage on Average", 
-     x = "Trader Joes in County", y = "% of Votes for Democrats in County") +
-  geom_hline(yintercept = 0.5, linetype="dashed", color = "red")
+# ggplot(main_data, aes(x = trader_joes, y = per_dem)) +
+#  geom_boxplot() +
+#  labs(title="Counties with a Trader Joes Vote for Dems at a Higher Percentage on Average", 
+#     x = "Trader Joes in County", y = "% of Votes for Democrats in County") +
+#  geom_hline(yintercept = 0.5, linetype="dashed", color = "red")
 
-ggplot(main_data, aes(x = nordstrom, y = per_dem)) +
-  geom_boxplot() +
-  labs(title="Counties with a Nordstrom Vote for Dems at a Higher Percentage on Average", 
-     x = "Nordstrom in County", y = "% of Votes for Democrats in County") +
-  geom_hline(yintercept = 0.5, linetype="dashed", color = "red")
+tjg <- ggplot(main_data, mapping = aes(x=trader_joes_100k, y = per_dem)) +
+  geom_point(alpha=0.3) +
+  geom_smooth(method="lm") + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
 
-ggplot(main_data, aes(x = cabelas, y = per_dem)) +
-  geom_boxplot() +
-  labs(title="Counties with a Cabela's Vote for Dems at a Higher Percentage on Average",
-       subtitle="However, Democrats did not receive a majority of the votes in counties with a Caebla's",
-     x = "Cabela's in County", y = "% of Votes for Democrats in County") +
-  geom_hline(yintercept = 0.5, linetype="dashed", color = "red")
+cineg <- ggplot(main_data, mapping = aes(x=cinemarks_100k, y = per_dem)) +
+  geom_point(alpha=0.3) +
+  geom_smooth(method="lm") + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
 
-ggplot(main_data, aes(x = cinemark, y = per_dem)) +
-  geom_boxplot() +
-  labs(title="Counties with a Cinemark Vote for Dems at a Higher Percentage on Average", 
-       subtitle = "Democrats received 50% of the Vote in Counties with a Cinemark on average",
-     x = "Cinemark in County", y = "% of Votes for Democrats in County") +
-  geom_hline(yintercept = 0.5, linetype="dashed", color = "red")
+cabeg <- ggplot(main_data, mapping = aes(x=cabelas_100k, y = per_dem)) +
+  geom_point(alpha=0.3) +
+  geom_smooth(method="lm") + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
+
+ng <- ggplot(main_data, mapping = aes(x=nordstroms_100k, y = per_dem)) +
+  geom_point(alpha=0.3) +
+  geom_smooth(method="lm") + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
+
+ggarrange(tjg, cineg, cabeg, ng,
+                    labels = c("Trader Joe's", "Cinemark", "Cabela's", "Nordstrom"),
+                    ncol = 2, nrow = 2, label.x = 0.2)
 ```
 
 
@@ -134,7 +144,7 @@ These graphs show that regardless of the retailer, it appears as if Democrats pe
 
 In order to analyze whether the presence of big box retailers corresponds with a county's political leanings, we will utilize a beta regression model using the percentage of votes in the county cast for Democrats during the 2020 president election as our dependent variable. We chose this dependent variable since the percentage of votes that a party receives is the best measure of a county's political leanings in the United States, given that the United States is a largely two-party political system. By using the percentage of votes for Democrats, we can capture information that we would not be able to if we simply used a binary indicator for which party won the county. For instance, a county that Democrats won by 0.2 percentage points would be regarded equally to a county that Democrats won by 50 percentage points, when in reality, one county is a swing district and the other is a staunchly Democratic county. We use the percentage of Democratic votes instead of Republican votes since we believed it would increase interpretability given that our EDA indicated that most counties with one of our four stores will mostly vote for Democrats. However, in our sensitivity analyses in the appendix, we repeat our analysis using the percentage of Republican votes in a county and find that the results are largely the same because of the two party system in the United States.
 
-Our analysis employs a beta regression model. However, other models were considered as well, such as a linear regression model, an OLS model, a poisson model with an offset, and a negative binomial model with an offset. We do not use a linear regression model since our response variable is bounded between 0 and 1, which a linear regression model does not account for. We do not use the OLS model because our dependent variable has values that are close to 0 and as a result, the OLS model could run into the same issue that the linear regression model faces where it does not bound the dependent variable distribution between 0 and 1. Finally, the percentage of votes in a county is a count of the votes for a party divided by the count of total votes in the county, which can be modeled via a model of count data with an offset. In these models, our dependent variable would be the count of votes for a party and the offset would be the total votes in that county. However, we see that a Poisson model is not viable since the mean count of votes for both parties is not equal to the variance of the count of votes for that party, an assumption of the poisson model. We then consider a negative binomial model which assumes that the mean of the dependent count variable is not equal to its variance. However, when performing some EDA, which can be found in the Appendix, we found that the count of votes for either party does not fit a negative binomial distribution despite the fact that it is count data with overdispersion. Instead, the beta regression model assumes that the response variable follows a beta distribution, a distribution of values between 0 and 1. Our response variable does the same and has a single mode, which is similar to a beta distribution again. This is further discussed and visualized in Appendix. In general, the beta distribution is incredibly applicable for proportion data, such as the percentage of votes for a party in a county (Ferrari et al., 2004). Since the only other assumption for a beta regression model is that there is a linear relationship between the predictors and the response variable, we feel confident employing a beta regression model, since the percentage of democratic votes in a county falls between 0 and 1, similar to a beta distribution.
+Our analysis employs a beta regression model. However, other models were considered as well, such as a linear regression model, an OLS model, a poisson model with an offset, and a negative binomial model with an offset. We do not use a linear regression model since our response variable is bounded between 0 and 1, which a linear regression model does not account for. We do not use the OLS model because our dependent variable has values that are close to 0 and as a result, the OLS model could run into the same issue that the linear regression model faces where it does not bound the dependent variable distribution between 0 and 1. Finally, the percentage of votes in a county is a count of the votes for a party divided by the count of total votes in the county, which can be modeled via a model of count data with an offset. In these models, our dependent variable would be the count of votes for a party and the offset would be the total votes in that county. However, we see that a Poisson model is not viable since the mean count of votes for both parties is not equal to the variance of the count of votes for that party, an assumption of the poisson model. We then consider a negative binomial model which does not require that the mean of the dependent count variable is equal to its variance. However, when performing some EDA, which can be found in the Appendix, we found that the count of votes for either party does not fit a negative binomial distribution despite the fact that it is count data with overdispersion. Instead, the beta regression model assumes that the response variable follows a beta distribution, a distribution of values between 0 and 1. Our response variable does the same and has a single mode, which is similar to a beta distribution again. This is further discussed and visualized in Appendix. In general, the beta distribution is incredibly applicable for proportion data, such as the percentage of votes for a party in a county (Ferrari et al., 2004). Since the only other assumption for a beta regression model is that there is a linear relationship between the predictors and the response variable, we feel confident employing a beta regression model, since the percentage of democratic votes in a county falls between 0 and 1, similar to a beta distribution.
 
 We check the assumptions of the beta regression model in the appendix. The beta regression model has the following three assumptions:
 
@@ -144,20 +154,17 @@ We check the assumptions of the beta regression model in the appendix. The beta 
 
 ## Model Formula
  
-education levels, poverty rates, the median income of the county, unemployment rates, and whether the county is urban or rural
- 
 $$
 \begin{aligned}
-link(\mu_i) = &\beta_0 + \beta_1 * (Trader.Joes.in.County_i=True) + \beta_2 * (Cabelas.in.County_i=True) + \\
-&\beta_3 * (Cinemark.in.County_i=True) + \beta_4 * (Nordstrom.in.County_i=True) + \\
-&\beta_5 * (White.Population) + \beta_6 * (Black.Population) + \beta_7 * (Hispanic.Population) + \\
-&\beta_8 * (Asian.Population) + \beta_9 * (Male.Population) + \beta_{10} * (Female.Population) + \\
-&\beta_{11} * (Percent.with.College.Education) + \beta_{12} * (Percent.in.Poverty) + \\
-&\beta_{13} * (Percent.Unemployed) + \beta_{14} *(Urban.County=True)
+logit(\mu_i) = &\beta_0 + \beta_1 * (\#.of.Trader.Joes.per.100k.residents_i) + \beta_2 * (\#.of.Cabelas.per.100k.residents_i) + \\
+&\beta_3 * (\#.of.Cinemark.per.100k.residents_i) + \beta_4 * (\#.of.Nordstrom.per.100k.residents_i) + \\
+&\beta_5 * (Percent.White_i) + \beta_6 * (Percent.Black_.Population_i) + \beta_7 * (Percent.Hispanic_i) + \\
+&\beta_8 * (Percent.Asian_) + \beta_9 * (Percent.Male_i) + \beta_{11} * (Percent.with.College.Education_i) + \\
+&\beta_{12} * (Percent.in.Poverty_i) + \beta_{13} * (Percent.Unemployed_i) + \beta_{14} *(Urban.County_i=True)
 \end{aligned}
 $$
 
-where $\mu_i$ is an observation-specific mean for $Percent.Democratic_i$ and we separately estimate the precision parameter for the distribution on the mean to be $\phi_i =  precision\_link(\phi_i)$.
+where $\mu_i$ is an observation-specific mean for a Beta distribution with mean equal to $Percent.Democratic_i$ and a precision parameter that is modeled as $\phi_i =  log(\phi_i)$.
 
 ## Sensitivity Analyses
 
@@ -166,14 +173,100 @@ We will perform a few sensitivity analyses in which we compare the performance o
 
 ```{r}
 
-model <- betareg(per_dem ~ trader_joes + cabelas + cinemark + nordstrom + white_pop + 
-                     black_pop + hispanic_pop + asian_pop + male_pop + female_pop +
+store_counties <- !is.na(main_data$trader_joes_count) | !is.na(main_data$nordstroms_count) | !is.na(main_data$cabelas_count) | !is.na(main_data$cinemarks_count)
+
+model <- betareg(per_dem ~ trader_joes_100k + cabelas_100k + 
+                     cinemarks_100k + nordstroms_100k + perc_white + 
+                     perc_black + perc_hispanic + perc_asian + perc_male +
                      percent_educated + percent_poverty + Unemployment_rate_2019 +
-                     Metro_2013, data = main_data)
+                     Metro_2013 , data = main_data, link = "logit", link.phi = "log")
+
+model_non_constant_phi <- betareg(per_dem ~ trader_joes_100k + cabelas_100k + 
+                     cinemarks_100k + nordstroms_100k + perc_white + 
+                     perc_black + perc_hispanic + perc_asian + perc_male +
+                     percent_educated + percent_poverty + Unemployment_rate_2019 +
+                     Metro_2013 | trader_joes_100k + cabelas_100k + cinemarks_100k + nordstroms_100k + perc_white + 
+                     perc_black + perc_hispanic + perc_asian + perc_male +
+                     percent_educated + percent_poverty + Unemployment_rate_2019 +
+                     Metro_2013, data = main_data, link = "logit", link.phi = "log")
+
+model_only_store_counties <- betareg(per_dem ~ trader_joes_100k + cabelas_100k + 
+                     cinemarks_100k + nordstroms_100k + perc_white + 
+                     perc_black + perc_hispanic + perc_asian + perc_male +
+                     percent_educated + percent_poverty + Unemployment_rate_2019 +
+                     Metro_2013 , data = main_data[store_counties,], link = "logit", link.phi = "log")
+
+model_basic <- betareg(per_dem ~ perc_white + 
+                     perc_black + perc_hispanic + perc_asian + perc_male +
+                     percent_educated + percent_poverty + Unemployment_rate_2019 +
+                     Metro_2013, data = main_data, link = "logit", link.phi = "log")
+
 summary (model)
+
+standard_errors <- repmod::report(model)[2]$se
+
+p_values <- repmod::report(model)[5]$pvalues
+
+hist(main_data$per_dem)
+
+summary(model_only_store_counties)
+```
+
+# Results
+
+```{r, include=T}
+# https://stackoverflow.com/questions/58145601/change-bits-of-text-specification-fontface-bold-italic-in-a-kableextra
+
+string_p_values <- c( "2.985576e-04", "7.933934e-09",  "9.786848e-01", "2.528865e-01", "1.872358e-02", "1.768248e-29",  "1.084465e-15",  "1.279832e-04", "2.284488e-24",  "4.440614e-04", "7.443250e-139",  "5.673608e-01",  "2.811044e-52",  "3.727075e-11")
+succinct_string_p_values <- c(
+    "**<0.001**", "**<0.001**",  "0.979", "0.253", "**0.019**", "**<0.001**",  "**<0.001**",  "**<0.001*****", "**<0.001**",  "**<0.001**", "**<0.001**",  "0.567",  "**<0.001**",  "**<0.001**"
+  )
+
+precision_link = data.frame(Estimates=c("", "20.6591"), Exponentiated.Estimates =c("", "937849457"), 
+                            Standard.Errors = c("", ""), P.values = c("", ""))
+
+results_table_df <- data.frame(
+  Estimates=model$coefficients$mean,
+  Exponentiated.Estimates = exp(model$coefficients$mean),
+  Standard.Errors = standard_errors,
+  P.values = succinct_string_p_values
+)
+
+results_table_df <- rbind(results_table_df, precision_link)
+
+rownames(results_table_df) <- c("Intercept", "Trader Joe's per 100k", "Cabela's per 100k", "Cinemarks per 100k", 
+                                "Nordstroms per 100k", "% White", "% Black", "% Hispanic", "% Asian", "% Male", 
+                                "% Educated", "% Poverty", "% Unemployed","Urban", "", "Precision Link")
+
+names(results_table_df) <- c("Estimates", "Exp(Estimates)", "Standard Errors", "P-Values")
+
+kbl(results_table_df, digits=3, format = "markdown") 
 
 ```
 
+# Discussion
+
+## Model Interpretation and Implications
+
+From the above model, we conclude that there is a significant, positive relationship between the number of Trader Joe's stores per 100,000 residents in a county and that county's percentage of votes for Democrats. We also see a significant, positive correlation between the number of Nordstrom stores per 100,000 residents in a county and that county's political preference. However, we do not see significant relationships between a county's political preference and the number of Cinemarks per 100,000 capita or Cabela's per 100,000 capita in a county. More specifically, we see that for a 1 store increase in the number of Trader Joe's stores per 100,000 residents, we see an increase of 1.285 in the log odds for the percentage of the county that voted for Democrats. Then for a 1 store increase in the number of Nordstrom stores per 100,000 residents, we see an increase of 0.772 in the log odds for the percentage of the county that voted for Democrats. Both of these are significant relationships, with p-values of less than 0.001 and 0.019, respectively. 
+
+This has many implications for future research in this field. As mentioned, there has been very little publicly available, rigorous, academic research on this topic - examining a correlation between the presence of certain stores in a county and that county's political preferences. However, the findings of this study indicate that there may be promise in examining this line of research further. In the same way that the governmental agency FEMA uses the "Waffle House Index" to determine the severity of natural disasters, this line of research could do the same for politics and political campaigns. Since these private companies are spending so many resources to determine target demographics and implant stores in areas where those target demographics shop, it would be easier for political campaigns to use the locations of these stores than spend large amounts of resources in order to draw inferences about an electorate that shops similarly to how they vote. If there are certain underlying characteristics in individuals that result in those individuals both shopping at certain stores and possessing a certain political outlook, it would be prudent of political campaigns to simply use the stores as a measure of political affiliation instead of researching the underlying characteristics. This may especially be the case as politics in the United States shift to become increasingly focused on issues around culture.
+
+## Strengths and Weaknesses
+
+One of the strengths of this analysis is that it really is one of the first in the field to apply a more rigorous, advanced methodology to analyzing the relationship between the presence of stores in a county and that county's political influence. Since there has not been any publicly available research published on this topic previously, one of the greatest strengths of this paper is that it is a trailblazer in its field and is investigating a topic of public interest, as evident from the extensive press coverage, in a more scientific manner. In addition, this paper's accessibility is another one of its strengths. Often times, analyses that rely on data from the private sector or location based data are restricted through a paywall or require special permissions to access. However, all of the data that we are using is publicly available. In addition, the methods that we are using are easily interpretable as opposed to some previous analyses that have used methods such as a random forest model, which is a black-box algorithm.  
+
+While this analysis has many strengths, it also has a few weaknesses. Despite the fact that the analysis is incredibly accessible and only uses publicly available data, the data collection process for adding a new store is quite cumbersome. If future researchers want to add additional stores to this analysis, as we suggest below as future directions for this research, there is a great deal of web scraping and data wrangling that is required to add these additional stores that may be quite work-intensive and time-consuming. However, one of the most glaring weaknesses in this analysis is the fact that this analysis's larger framework assumes that there are only 2 political preferences in the United States and that if individuals in a county are not voting for Democrats, that they are voting for Republicans. While no inferences are made throughout the paper that explicitly state that individuals who do not vote for Democrats must vote for Republicans, the model framework that we design and our choice of a dependent variable is based on the fact that there is a 2-party system in the United States. Because of this, we employ our dependent variable as the percentage of votes in a county for Democrats and perform a sensitivity analysis to ensure that similar results would ensure from changing our dependent variable to the percentage of votes for Republicans in a county. However, we do not account for 3rd party voters in either our model framework or our sensitivity analysis, but advise future research to explore this in future works.
+
+## Future Directions
+
+Given that this study is the first rigorous, academic study of its kind, there are many future directions in which future research could explore this issue. However, there are 3 future directions that we think are the most promising to explore and that we would advise future researchers to explore.
+
+1. As mentioned in the weaknesses, the model framework that we design and our choice of a dependent variable is based on the fact that there is a 2-party system in the United States. It does not account for 3rd party voters, and we would advise future researchers to explore this problem using a framework that accounts for 3rd party voters.
+
+2. We believe that there may be some underlying spatial variables that may not be accounted for in our current model. Incorporating spatial characteristics would improve the robustness of this analysis and perhaps also provide better results. Depending on the sort of spatial model and the potential confounding variables, utilizing a spatial model could help account for confounding variables that were not considered in our initial analysis.
+
+3. Finally, we would advise future researchers to explore more stores than are present in our analysis. While we chose these stores due to our belief that these 4 stores are representative of different voting blocs in the United States that are representative of most of the major voting blocs, this may not be true, and we would encourage other researchers to explore other stores that they believe may represent different groups of voters in order to help advance this area of research.
 
 # Appendix
 
@@ -185,6 +278,7 @@ summary (model)
 # We see below that that the number of counties that Republicans won is far greater than the number of counties that Democrats won in 2020. In addition to the fact that we believe percentage 
 
 # main_data %>% group_by(winner) %>% summarise(count = n())
+# predict(model, type="precision")
 ```
 
 
@@ -233,7 +327,7 @@ ggplot(data=main_data, mapping=aes(x=per_dem)) +
 
 Next, we analyze the assumption that our observations are independent of each other. While there are some concerns here regarding individuals in different counties of a similar makeup being exposed to the same media and neighboring counties being in similar communities that affect the politics of the county, we feel confident that these effects are negligible and that we include the proper covariates in our model to account for any confounding variables. Plotting the residuals below, we see that there is a random scatter of residuals and this helps us feel more confident that there is independence between our observations.
 
-```{r}
+```{r, include=T}
 ggplot(data=NULL) + 
   aes(x = 1:nrow(main_data), y = residuals(model)) + 
   geom_point() +
@@ -244,7 +338,7 @@ ggplot(data=NULL) +
 
 We will next investigate whether the linearity assumption is met for our model by plotting the fitted means for our observed data and the residuals of our data. Seeing that there is a random scatter around the y-axis, we feel confident that the linearity assumption is met.
 
-```{r}
+```{r, include=T}
 ggplot(data=NULL) + 
   aes(x = fitted(model), y = residuals(model)) + 
   geom_point() +
@@ -255,7 +349,7 @@ ggplot(data=NULL) +
 
 Next, we will check for potentially influential points in our model. We plot both the leverage and the Cook's distance values of our model, and we see that we have a few observations that have a high leverage. However, looking at the Cook's distance for these values, we see that there are no points with a high Cook's distance. As a result, we feel confident that there are no influential points in our model.
 
-```{r}
+```{r, include=T}
 ggplot(data=NULL) +
   aes(x = predict(model), y = gleverage(model)) +
   geom_point() + 

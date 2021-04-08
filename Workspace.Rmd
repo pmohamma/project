@@ -13,6 +13,17 @@ The EDA is a bit strange in terms of the conditioning - you are looking within c
 
 ^^ ASK ABOUT THIS. NOT SURE WHAT THIS MEANS
 
+# Methodology
+
+Include Median Household Income in Analysis
+
+Include distribution specification in model equation
+
+Include sensitivity analysis where we only use counties that have one of the stores in them
+
+# Discussion
+
+For every 1 unit increase in the number of Trader Joe's in a county, the log odds of the percentage of individuals who voted Democratic in that county increases by non-exponentiated coefficient.
 
 # Takeaways
 
