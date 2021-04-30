@@ -39,7 +39,7 @@ Aside from Trader Joe's, all of these stores have yet to be the subject of a rig
 
 We use publicly available data online that can be downloaded for the list of sites in the Data subsection of our References. These include open-source government databases as well as public location listings by private companies. The 2020 presidential election results that we use to measure a county's political leanings are borrowed from the GitHub user \@tonmcg, who developed the datasets from information provided by The Guardian, townhall.com, Fox News, Politico, and the New York Times (Tonmcg, 2020). All of the government provided databases are estimations of the current values based on the most US Census which occurred in 2010 and trends in the data since that time. Finally, the location listings are either provided by the stores themselves or reputable third-party sources, such as Fandango. We use the 'geopy' Python library to map these locations to their corresponding geographical county. Any locations whose counties cannot be found by the Python library are hand-encoded. Because Alaska uses electoral districts instead of counties in their voting procedures, we will not consider Alaska in this analysis and remove all data from Alaska in our dataset prior to analysis. While this solution is not ideal, it is consistent with previous literature and prudent since we do not feel comfortable using two different region distinctions in the calculation of our dependent variable (Gomez et al., 2007).  
 
-We will use the percentage of votes for the Democratic party in the 2020 presidential election results from a county as our dependent variable, which will be a numeric variable between 0 and 1, to measure the political leanings of a county. For our independent variables, we will have four numeric variables that each correspond to the number of stores per 100,000 residents in a county. Each variable will correspond to one of the 4 stores that we are considering in this analysis. In addition to these variables, we will include indpendent variables that are usually included in analyses of a county's political leanings. These variables are borrowed from Kahane, and they include the percentage of the population that is each of the following races: Black, White, Hispanic, and Asian; the percentage of the population that is male, the percentage of the population that has received a 4-year university degree or more, poverty rates in a county, the median income of the county, unemployment rates of the county, and whether the county is urban or rural (Kahane, 2020). We exclude both an "other" race category as well as the percentage of females in a county in our analysis, because we define the two as being complementary and mutually exclusive with the existing variables in our independent variables, and thus, we would not gain any additional informaiton from including these counts. We additionally exclude certain variables that we did not have access to, such as religion in our analysis.
+We will use the percentage of votes for the Democratic party in the 2020 presidential election results from a county as our dependent variable, which will be a numeric variable between 0 and 1, to measure the political leanings of a county. For our independent variables, we will have four numeric variables that each correspond to the number of stores per 100,000 residents in a county. Each variable will correspond to one of the 4 stores that we are considering in this analysis. In addition to these variables, we will include indpendent variables that are usually included in analyses of a county's political leanings. These variables are borrowed from Kahane, and they include the percentage of the population that is each of the following races: Black, White, Hispanic, and Asian; the percentage of the population that is male, the percentage of the population that has received a 4-year university degree or more, poverty rates in a county, the median income of the county, unemployment rates of the county, and whether the county is urban or rural (Kahane, 2020). We exclude both an "other" race category as well as the percentage of females in a county in our analysis, because we define the two as being complementary and mutually exclusive with the existing variables in our independent variables, and thus, we would not gain any additional informaiton from including these counts. We additionally exclude certain variables that we did not have access to, such as religion in our analysis. Finally, we use the demographic percentages in a county as opposed to raw counts of individuals in these demographics because of the fact that including raw counts may simply be measuring the total population in a county instead of the racial or sex breakdowns of a county.
 
 
 ```{r}
@@ -86,19 +86,19 @@ main_data$nordstrom <- main_data$nordstrom=="True"
 
 tjg <- ggplot(main_data, mapping = aes(x=trader_joes_100k, y = per_dem)) +
   geom_point(alpha=0.3) +
-  geom_smooth(method="lm") + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
+  geom_smooth(method="lm", se=FALSE) + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
 
 cineg <- ggplot(main_data, mapping = aes(x=cinemarks_100k, y = per_dem)) +
   geom_point(alpha=0.3) +
-  geom_smooth(method="lm") + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
+  geom_smooth(method="lm", se=FALSE) + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
 
 cabeg <- ggplot(main_data, mapping = aes(x=cabelas_100k, y = per_dem)) +
   geom_point(alpha=0.3) +
-  geom_smooth(method="lm") + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
+  geom_smooth(method="lm", se=FALSE) + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
 
 ng <- ggplot(main_data, mapping = aes(x=nordstroms_100k, y = per_dem)) +
   geom_point(alpha=0.3) +
-  geom_smooth(method="lm") + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
+  geom_smooth(method="lm", se=FALSE) + labs(y = "% of Votes for Democrats", x = "Stores per 100,000 County Residents")
 
 ggarrange(tjg, cineg, cabeg, ng,
                     labels = c("Trader Joe's", "Cinemark", "Cabela's", "Nordstrom"),
